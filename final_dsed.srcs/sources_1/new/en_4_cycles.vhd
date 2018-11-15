@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -41,8 +41,27 @@ end en_4_cycles;
 
 
 architecture Behavioral of en_4_cycles is
-
+signal r_reg: std_logic_vector(1 downto 0);
+signal r_next: std_logic_vector(1 downto 0);
+signal cuenta: std_logic_vector(2 downto 0);
+signal cuenta_next: std_logic_vector(2 downto 0);
 begin
-
-
+--Register
+    process(clk_12megas , reset)
+        begin
+            if (reset = '1') then
+                r_reg <= (0=>'1', others => '0');
+                cuenta <= (others => '0');
+             elsif (clk_12megas'event and clk_12megas = '1') then
+                cuenta <= cuenta_next;
+                r_reg <= r_next;
+             end if; 
+    end process;
+--Next state logic
+r_next <= r_reg(0) & r_reg(1);
+cuenta_next <= (others => '0') when cuenta = "011" else
+        std_logic_vector(unsigned(cuenta)+ 1);
+--output logic
+en_2_cycles <= r_reg(1);
+clk_3megas <= '1' when cuenta >= "010" else '0';
 end Behavioral;
