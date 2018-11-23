@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="20" Path="C:/Users/pc/Desktop/Practicas Vivado/Proyecto/fpga_audio_processing/final_dsed.xpr">
+<Project Version="7" Minor="20" Path="C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="6fe248a97fef4921ac7e6026104f67fa"/>
@@ -66,6 +66,13 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/en_4_cycles.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/FSMD_microphone.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>

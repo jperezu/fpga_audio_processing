@@ -1,1 +1,0 @@
-[1123/122302:WARNING:ipc_channel_win.cc(375)] Unable to create pipe "\\.\pipe\chrome.11644.0.86000261" in client mode: El sistema no puede encontrar el archivo especificado. (0x2)
