@@ -60,7 +60,7 @@ constant clk_period : time := 167 ns;
 signal clk_s, clk_3megas_s, reset_s, rst_cycles_s, micro_data_s : std_logic;
 signal en_2_cycles_s, enable_4_cycles_s, sample_out_ready_s: std_logic;
 signal sample_out_s : std_logic_vector(sample_size-1 downto 0);
-
+signal a,b,c : std_logic := '0';
 
 begin
 DUT_EN: en_4_cycles port map(
@@ -91,19 +91,26 @@ DUT_EN: en_4_cycles port map(
     stim_process : process
         begin
         micro_data_s <= '1';
-        reset_s <= '1';
+        reset_s <= '0';
         rst_cycles_s <= '1';
         wait for 400ns;
-        reset_s <= '0';
-        rst_cycles_s <= '0';
-        wait for 200 us;
         reset_s <= '1';
+        rst_cycles_s <= '0'; 
+        
+--        a <= not a after 1300 ns;
+--        b <= not b after 2100 ns;
+--        c <= not c after 3700 ns;
+        
+        
+        wait for 200 us;
+        reset_s <= '0';
         rst_cycles_s <= '1';
         wait for 250 us;
         reset_s <= '0';
         rst_cycles_s <= '0';
-        wait;   
+        wait;
     end process;
 
+-- micro_data_s <= a xor b xor c;
     
 end Behavioral;

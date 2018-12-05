@@ -52,7 +52,7 @@ architecture Behavioral of en_4_cycles_tb is
      constant clk_period: time:= 167 ns;
 begin
 
-    DUT: en_4_cycles PORT MAP (
+    DUT: en_4_cycles port map (
         clk_12megas => clk_12megas_s,
         reset => reset_s,
         clk_3megas => clk_3megas_s,

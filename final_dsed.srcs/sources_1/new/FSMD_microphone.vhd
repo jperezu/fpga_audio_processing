@@ -58,41 +58,42 @@ begin
     -- State and data registers 
     process (clk_12megas, reset, micro_data)
         begin 
-            if  (reset = '1') then
-                state_reg <= idle;
-            elsif (clk_12megas'event and clk_12megas = '1') then
+            
+            if (clk_12megas'event and clk_12megas = '1') then
                 state_reg <= state_next;
                 micro_reg_next <= micro_reg;
             end if;
     end process;
 
 
-    process (state_reg, cuenta)
+    process (state_reg, cuenta, reset)
         begin
             micro_reg <= micro_data;
-            case state_reg is
-                when idle => 
-                    state_next <= muestreo;
-                    
-                when muestreo =>
-                    if (std_logic_vector(to_unsigned(105,9)) <= cuenta and cuenta <= std_logic_vector(to_unsigned(149,9))) then
-                        state_next <= cont2;
-                    elsif (std_logic_vector(to_unsigned(255,9)) <= cuenta) then
-                        state_next <= cont1;
-                    end if;
-                            
-                when cont2 =>
-                    if (std_logic_vector(to_unsigned(149,9)) <= cuenta) then
+            if  (reset = '0') then
+                 state_next <= idle;
+            else
+                case state_reg is
+                    when idle => 
                         state_next <= muestreo;
-                    end if;
-                when cont1 =>
-                    if (std_logic_vector(to_unsigned(298,9)) <= cuenta) then
-                        state_next <= restart;
-                    end if;
-                when restart =>
-                        state_next <= muestreo;
-                end case; 
-    
+                    when muestreo =>
+                        if (std_logic_vector(to_unsigned(105,9)) <= cuenta and cuenta <= std_logic_vector(to_unsigned(149,9))) then
+                            state_next <= cont2;
+                        elsif (std_logic_vector(to_unsigned(255,9)) <= cuenta) then
+                            state_next <= cont1;
+                        end if;
+                                
+                    when cont2 =>
+                        if (std_logic_vector(to_unsigned(149,9)) <= cuenta) then
+                            state_next <= muestreo;
+                        end if;
+                    when cont1 =>
+                        if (std_logic_vector(to_unsigned(298,9)) <= cuenta) then
+                            state_next <= restart;
+                        end if;
+                    when restart =>
+                            state_next <= muestreo;
+                    end case;          
+          end if;
     end process;
     
     --- Output logic

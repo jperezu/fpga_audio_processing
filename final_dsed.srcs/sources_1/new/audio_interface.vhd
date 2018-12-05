@@ -43,7 +43,7 @@ entity audio_interface is
     --To/From the microphone
            micro_clk : out STD_LOGIC;
            micro_data : in STD_LOGIC;
-           micro_LR : out STD_LOGIC;
+           micro_LR : out STD_LOGIC; 
     --Playing ports
     --To/From the controller
            play_enable: in STD_LOGIC;
@@ -56,7 +56,61 @@ end audio_interface;
 
 architecture Behavioral of audio_interface is
 
-begin
+component en_4_cycles Port (
+            clk_12megas : in STD_LOGIC;
+            reset : in STD_LOGIC;
+            clk_3megas: out STD_LOGIC;
+            en_2_cycles: out STD_LOGIC;
+            en_4_cycles : out STD_LOGIC);
+end component;
+
+component FSMD_microphone Port (
+        clk_12megas : in STD_LOGIC;
+        reset : in STD_LOGIC;
+        enable_4_cycles : in STD_LOGIC;
+        micro_data : in STD_LOGIC;
+        sample_out : out STD_LOGIC_VECTOR (sample_size-1 downto 0);
+        sample_out_ready : out STD_LOGIC);
+end component;
+
+component pwm Port(
+        clk_12megas: in std_logic;
+        reset: in std_logic;
+        en_2_cycles: in std_logic;
+        sample_in: in std_logic_vector(sample_size-1 downto 0);
+        sample_request: out std_logic;
+        pwm_pulse: out std_logic);
+end component;
+
+signal en_2, en_4 : std_logic;
+ 
+begin 
+    
+U_EN: en_4_cycles port map(
+        clk_12megas => clk_12megas,
+        reset => reset,
+        clk_3megas => micro_clk,
+        en_2_cycles => en_2,
+        en_4_cycles => en_4); 
+        
+U_MICRO: FSMD_microphone port map(   
+       clk_12megas => clk_12megas,
+       reset => record_enable,
+       enable_4_cycles => en_4,
+       micro_data => micro_data,
+       sample_out => sample_out,
+       sample_out_ready => sample_out_ready);
+       
+U_PWM: pwm port map( 
+       clk_12megas => clk_12megas,
+       reset => play_enable,
+       en_2_cycles => en_2,
+       sample_in => sample_in,
+       sample_request => sample_request,
+       pwm_pulse => jack_pwm);
+
+
+
 
 
 end Behavioral;
