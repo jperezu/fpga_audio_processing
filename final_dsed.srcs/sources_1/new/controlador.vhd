@@ -78,7 +78,7 @@ component clk_12M
     );
 end component;
 
-signal loop_back : std_logic_vector(sample_size-1 downto 0);
+signal loop_back : std_logic_vector(sample_size-1 downto 0); -- connects sample_in and sample_out
 signal clk_12megas_s : std_logic;
 signal always_high : std_logic := '1';
 
@@ -97,11 +97,11 @@ U_AI: audio_interface port map(
            sample_out_ready => open,
            micro_clk => micro_clk,
            micro_data => micro_data,
-           micro_LR => always_high,
+           micro_LR => micro_LR,
            play_enable => always_high,
            sample_in => loop_back,
            sample_request => open,
-           jack_sd => always_high,
+           jack_sd => jack_sd,
            jack_pwm => jack_pwm
            ); 
 

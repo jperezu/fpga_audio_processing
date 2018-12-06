@@ -71,22 +71,32 @@ clk_process :process
                 wait for clk_period/2;
                 clk <= '1';
                 wait for clk_period/2;
-            end process;
-            
+            end process;        
 stim_process : process
                 begin
                 reset_s <= '1';
                 micro_data_s <= '0';
-                wait for 500 us;
+                wait for 10 us;
                 reset_s <= '0';
                 micro_data_s <= '1';
+                wait for 500 us;
+                micro_data_s <= '0';
                 wait for 1000 us;
-                micro_data_s <= '0';
-                wait for 4000 us;
                 micro_data_s <= '1';
-                wait for 10000 us;
+                wait for 500 us;
                 micro_data_s <= '0';
+                wait for 200 us;
+                micro_data_s <= '1';
+                wait for 300 us;
+                micro_data_s <= '0';
+                wait for 500 us;
+                micro_data_s <= '1'; 
+                wait for 500 us;                 
                 reset_s <= '1';
+                wait for 500 us;
+                micro_data_s <= '0';
+                wait for 500 us;
+                reset_s <= '0';
                 wait;            
             end process;
 

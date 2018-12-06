@@ -43,14 +43,14 @@ entity audio_interface is
     --To/From the microphone
            micro_clk : out STD_LOGIC;
            micro_data : in STD_LOGIC;
-           micro_LR : out STD_LOGIC; 
+           micro_LR : out STD_LOGIC := '0'; 
     --Playing ports
     --To/From the controller
            play_enable: in STD_LOGIC;
            sample_in: in std_logic_vector(sample_size-1 downto 0);
            sample_request: out std_logic;
     --To/From the mini-jack
-           jack_sd : out STD_LOGIC;
+           jack_sd : out STD_LOGIC := '1';
            jack_pwm : out STD_LOGIC);
 end audio_interface;
 
