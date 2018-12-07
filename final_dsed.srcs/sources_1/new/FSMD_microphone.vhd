@@ -80,7 +80,7 @@ begin
     end process;
 
 -- next state logic/ouput logic and data path routing
-    process (state_reg, cuenta_reg, dato1_reg, dato2_reg, primer_ciclo_reg, sample_out_reg, sample_out_ready_reg, enable_4_cycles)
+    process (state_reg, cuenta_reg, dato1_reg, dato2_reg, primer_ciclo_reg, sample_out_reg, sample_out_ready_reg, enable_4_cycles, micro_data)
         begin
             -- Default values
             cuenta <= cuenta_reg;
