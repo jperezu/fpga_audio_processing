@@ -56,16 +56,16 @@ signal address_reg, address_standby : std_logic_vector (18 downto 0);
 begin
 
 --Register
-    process(clk_12megas, reset, BTNC, BTNR, sample_ready,last_record_next)
+    process(clk_12megas, reset, BTNC, BTNR, sample_ready,sample_request)
         begin
             if (reset = '1' or BTNC = '1') then
                 last_address_reg <= (others => '0');
                 last_record_reg <= (others => '0');
                 address_standby <= (others => '0');
+             elsif (clk_12megas'event and clk_12megas = '1') then    
                 if (BTNR = '0') then
-                    last_record_reg <= selection;
-                end if;
-             elsif (clk_12megas'event and clk_12megas = '1') then                 
+                    last_record_reg <= selection; -- vuelve la reproduccion al origen
+                end if;             
                 if (sample_ready = '1') then
                     last_address_reg <= last_address_next;
                 elsif (sample_request = '1') then 
@@ -78,10 +78,11 @@ begin
 last_address_next <= (others => '0') when (last_address_reg = std_logic_vector(to_unsigned(524287,19))) else
                       std_logic_vector(unsigned(last_address_reg) + 1);
                       
-selection <= last_address_reg when (up_dwn = '1' or last_record_reg >= last_address_reg or last_record_reg =std_logic_vector(to_unsigned(0,19))) else
+selection <= last_address_reg when (up_dwn = '1') else
              (others => '0');
              
-last_record_next <= selection when (last_record_reg > last_address_reg or last_record_reg =std_logic_vector(to_unsigned(0,19))) else
+last_record_next <= selection when ((last_record_reg >= last_address_reg and up_dwn = '0') or
+                     (last_record_reg = std_logic_vector(to_unsigned(0,19))  and up_dwn = '1')) else
                      std_logic_vector(unsigned(last_record_reg) - 1) when (up_dwn = '1') else
                      std_logic_vector(unsigned(last_record_reg) + 1);
 

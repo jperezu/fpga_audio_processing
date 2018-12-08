@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544108668">
-  <File Type="PA-TCL" Name="controlador.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="controlador_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="controlador.vds"/>
-  <File Type="RDS-UTIL" Name="controlador_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="controlador_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="controlador.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="controlador_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="controlador_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544228404">
+  <File Type="RDS-PROPCONSTRS" Name="dsed_audio_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="dsed_audio.tcl"/>
+  <File Type="RDS-RDS" Name="dsed_audio.vds"/>
+  <File Type="RDS-UTIL" Name="dsed_audio_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="dsed_audio_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="dsed_audio.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="dsed_audio_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="dsed_audio_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/package_dsed.vhd">
@@ -17,6 +17,18 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/FSMD_microphone.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RAM.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/address_manager.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -34,13 +46,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/pwm.vhd">
+    <File Path="$PSRCDIR/sources_1/new/or_2.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/controlador.vhd">
+    <File Path="$PSRCDIR/sources_1/new/pwm.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -49,12 +61,19 @@
     <File Path="$PSRCDIR/sources_1/new/dsed_audio.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/controlador.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="controlador"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="dsed_audio"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -74,4 +93,5 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="clk_12M"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
 </GenRun>

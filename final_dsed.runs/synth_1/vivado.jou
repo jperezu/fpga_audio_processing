@@ -2,11 +2,11 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Thu Dec  6 16:04:37 2018
-# Process ID: 8432
+# Start of session at: Sat Dec  8 01:20:11 2018
+# Process ID: 8664
 # Current directory: C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1
-# Command line: vivado.exe -log controlador.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source controlador.tcl
-# Log file: C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/controlador.vds
+# Command line: vivado.exe -log dsed_audio.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dsed_audio.tcl
+# Log file: C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/dsed_audio.vds
 # Journal file: C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source controlador.tcl -notrace
+source dsed_audio.tcl -notrace

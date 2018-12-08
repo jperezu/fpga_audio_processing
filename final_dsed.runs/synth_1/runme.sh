@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log controlador.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source controlador.tcl
+EAStep vivado -log dsed_audio.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dsed_audio.tcl

@@ -129,7 +129,7 @@ U_AI: audio_interface port map(
            clk_12megas => clk_12megas_s,
            reset => reset,
            record_enable => BTNL,
-           sample_out => data_to_amp,
+           sample_out => data_to_mem,
            sample_out_ready => ready,
            micro_clk => micro_clk,
            micro_data => micro_data,
@@ -162,7 +162,7 @@ ADDR: address_manager port map (
           sample_request => request,
           BTNC => BTNC,
           BTNR => BTNR,
-          up_dwn => always_down,
+          up_dwn => SW0,
           address => address_s
           );
 
