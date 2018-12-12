@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Sat Dec  8 01:20:11 2018
-# Process ID: 8664
+# Start of session at: Wed Dec 12 13:17:51 2018
+# Process ID: 196
 # Current directory: C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1
 # Command line: vivado.exe -log dsed_audio.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dsed_audio.tcl
 # Log file: C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/dsed_audio.vds
@@ -15,14 +15,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10160 
+INFO: Helper process launched with PID 2344 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 362.348 ; gain = 76.453
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 361.551 ; gain = 75.633
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'dsed_audio' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:55]
-INFO: [Synth 8-3491] module 'clk_12M' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-8664-DESKTOP-JV0CNOI/realtime/clk_12M_stub.vhdl:5' bound to instance 'U_CLK' of component 'clk_12M' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:123]
-INFO: [Synth 8-638] synthesizing module 'clk_12M' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-8664-DESKTOP-JV0CNOI/realtime/clk_12M_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'audio_interface' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/audio_interface.vhd:35' bound to instance 'U_AI' of component 'audio_interface' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:128]
+INFO: [Synth 8-3491] module 'clk_12M' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/realtime/clk_12M_stub.vhdl:5' bound to instance 'U_CLK' of component 'clk_12M' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:125]
+INFO: [Synth 8-638] synthesizing module 'clk_12M' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/realtime/clk_12M_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'audio_interface' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/audio_interface.vhd:35' bound to instance 'U_AI' of component 'audio_interface' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:130]
 INFO: [Synth 8-638] synthesizing module 'audio_interface' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/audio_interface.vhd:57]
 INFO: [Synth 8-3491] module 'en_4_cycles' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/en_4_cycles.vhd:34' bound to instance 'U_EN' of component 'en_4_cycles' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/audio_interface.vhd:89]
 INFO: [Synth 8-638] synthesizing module 'en_4_cycles' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/en_4_cycles.vhd:43]
@@ -35,21 +35,21 @@ INFO: [Synth 8-3491] module 'pwm' declared at 'C:/Users/Jorge/Documents/VHDL/fin
 INFO: [Synth 8-638] synthesizing module 'pwm' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/pwm.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'pwm' (3#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/pwm.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'audio_interface' (4#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/audio_interface.vhd:57]
-INFO: [Synth 8-3491] module 'RAM' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:34' bound to instance 'MEM' of component 'RAM' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:144]
+INFO: [Synth 8-3491] module 'RAM' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:34' bound to instance 'MEM' of component 'RAM' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:146]
 INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:45]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-8664-DESKTOP-JV0CNOI/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'MEM' of component 'blk_mem_gen_0' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:60]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-8664-DESKTOP-JV0CNOI/realtime/blk_mem_gen_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'MEM' of component 'blk_mem_gen_0' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/realtime/blk_mem_gen_0_stub.vhdl:17]
 INFO: [Synth 8-256] done synthesizing module 'RAM' (5#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:45]
-INFO: [Synth 8-3491] module 'or_2' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/or_2.vhd:34' bound to instance 'OR2' of component 'or_2' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:152]
+INFO: [Synth 8-3491] module 'or_2' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/or_2.vhd:34' bound to instance 'OR2' of component 'or_2' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:154]
 INFO: [Synth 8-638] synthesizing module 'or_2' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/or_2.vhd:40]
 INFO: [Synth 8-256] done synthesizing module 'or_2' (6#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/or_2.vhd:40]
-INFO: [Synth 8-3491] module 'address_manager' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:34' bound to instance 'ADDR' of component 'address_manager' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:158]
-INFO: [Synth 8-638] synthesizing module 'address_manager' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'address_manager' (7#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:45]
+INFO: [Synth 8-3491] module 'address_manager' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:34' bound to instance 'ADDR' of component 'address_manager' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'address_manager' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'address_manager' (7#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:46]
 INFO: [Synth 8-256] done synthesizing module 'dsed_audio' (8#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:55]
 WARNING: [Synth 8-3331] design dsed_audio has unconnected port SW1
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 402.426 ; gain = 116.531
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 401.875 ; gain = 115.957
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -59,17 +59,17 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 402.426 ; gain = 116.531
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 401.875 ; gain = 115.957
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-8664-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc] for cell 'U_CLK'
-Finished Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-8664-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc] for cell 'U_CLK'
-Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-8664-DESKTOP-JV0CNOI/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'MEM/MEM'
-Finished Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-8664-DESKTOP-JV0CNOI/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'MEM/MEM'
+Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc] for cell 'U_CLK'
+Finished Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc] for cell 'U_CLK'
+Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'MEM/MEM'
+Finished Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'MEM/MEM'
 Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/Nexys4DDR_Master.xdc]
 Finished Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/Nexys4DDR_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jorge/Documents/VHDL/final_dsed/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dsed_audio_propImpl.xdc].
@@ -79,26 +79,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 713.656 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 713.863 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-8664-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-8664-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for MEM/MEM. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for U_CLK. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'FSMD_microphone'
 WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/FSMD_microphone.vhd:67]
@@ -107,7 +107,7 @@ INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "sample_request" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:87]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:77]
 WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/FSMD_microphone.vhd:67]
 WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/FSMD_microphone.vhd:67]
 ---------------------------------------------------------------------------------------------------
@@ -122,7 +122,7 @@ WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'FSMD_microphone'
 WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/FSMD_microphone.vhd:67]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -145,16 +145,16 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 3     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
 +---Muxes : 
-	   2 Input     19 Bit        Muxes := 7     
+	   2 Input     19 Bit        Muxes := 6     
 	   5 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
 	   5 Input      8 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 1     
 	  10 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 6     
 	   5 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -204,9 +204,10 @@ Detailed RTL Component Info :
 	   2 Input     19 Bit       Adders := 2     
 +---Registers : 
 	               19 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     19 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input     19 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -230,7 +231,7 @@ WARNING: [Synth 8-3917] design dsed_audio has port jack_sd driven by constant 1
 WARNING: [Synth 8-3331] design dsed_audio has unconnected port SW1
 WARNING: [Synth 8-3332] Sequential element (U_AI/U_EN/cuenta_reg[2]) is unused and will be removed from module dsed_audio.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -244,13 +245,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'U_CLK/clk_out1' to pin 'U_CLK/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,7 +263,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,7 +287,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -299,7 +300,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -311,25 +312,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -350,14 +351,14 @@ Report Cell Usage:
 |1     |blk_mem_gen_0_bbox |     1|
 |2     |clk_12M_bbox       |     1|
 |3     |CARRY4             |    15|
-|4     |LUT1               |    23|
-|5     |LUT2               |    47|
-|6     |LUT3               |     8|
-|7     |LUT4               |    63|
-|8     |LUT5               |    59|
-|9     |LUT6               |    44|
+|4     |LUT1               |    24|
+|5     |LUT2               |    44|
+|6     |LUT3               |    10|
+|7     |LUT4               |    41|
+|8     |LUT5               |    61|
+|9     |LUT6               |    66|
 |10    |MUXF7              |     8|
-|11    |FDCE               |   108|
+|11    |FDCE               |   109|
 |12    |FDPE               |     1|
 |13    |FDRE               |     1|
 |14    |IBUF               |     6|
@@ -368,20 +369,20 @@ Report Instance Areas:
 +------+------------+----------------+------+
 |      |Instance    |Module          |Cells |
 +------+------------+----------------+------+
-|1     |top         |                |   396|
-|2     |  ADDR      |address_manager |   195|
-|3     |  MEM       |RAM             |    16|
-|4     |  U_AI      |audio_interface |   174|
-|5     |    U_EN    |en_4_cycles     |     8|
-|6     |    U_MICRO |FSMD_microphone |   129|
-|7     |    U_PWM   |pwm             |    37|
+|1     |top         |                |   399|
+|2     |  ADDR      |address_manager |   199|
+|3     |  MEM       |RAM             |    14|
+|4     |  U_AI      |audio_interface |   175|
+|5     |    U_EN    |en_4_cycles     |     7|
+|6     |    U_MICRO |FSMD_microphone |   130|
+|7     |    U_PWM   |pwm             |    38|
 +------+------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 713.656 ; gain = 427.762
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 713.656 ; gain = 116.531
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 713.656 ; gain = 427.762
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 713.863 ; gain = 115.957
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -392,7 +393,7 @@ No Unisim elements were transformed.
 
 50 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 713.656 ; gain = 432.969
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 713.863 ; gain = 433.148
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/dsed_audio.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 713.656 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Dec  8 01:20:50 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 713.863 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 12 13:18:29 2018...

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Sat Dec  8 01:22:37 2018
+| Date             : Wed Dec 12 13:20:20 2018
 | Host             : DESKTOP-JV0CNOI running 64-bit major release  (build 9200)
 | Command          : report_power -file dsed_audio_power_routed.rpt -pb dsed_audio_power_summary_routed.pb -rpx dsed_audio_power_routed.rpx
 | Design           : dsed_audio
@@ -50,13 +50,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |      631 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      283 |     63400 |            0.45 |
+| Slice Logic    |    <0.001 |      634 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      285 |     63400 |            0.45 |
 |   CARRY4       |    <0.001 |       15 |     15850 |            0.09 |
-|   Register     |    <0.001 |      124 |    126800 |            0.10 |
+|   Register     |    <0.001 |      125 |    126800 |            0.10 |
 |   F7/F8 Muxes  |    <0.001 |       16 |     63400 |            0.03 |
 |   Others       |     0.000 |      156 |       --- |             --- |
-| Signals        |    <0.001 |      551 |       --- |             --- |
+| Signals        |    <0.001 |      553 |       --- |             --- |
 | Block RAM      |     0.003 |      128 |       135 |           94.81 |
 | MMCM           |     0.121 |        1 |         6 |           16.67 |
 | I/O            |    <0.001 |       11 |       210 |            5.24 |

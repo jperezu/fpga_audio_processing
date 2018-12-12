@@ -103,6 +103,7 @@ component address_manager
           BTNC : in STD_LOGIC;
           BTNR : in STD_LOGIC;
           up_dwn : in STD_LOGIC;
+          playing : out STD_LOGIC;
           address : out STD_LOGIC_VECTOR (18 downto 0));
 end component;
 
@@ -116,6 +117,7 @@ signal clk_12megas_s : std_logic;
 signal data_to_mem, data_to_amp : std_logic_vector (sample_size-1 downto 0);
 signal ready, request, or_en : std_logic;
 signal address_s : std_logic_vector (18 downto 0);
+signal playing_s : std_logic;
 signal always_high : std_logic := '1';
 signal always_down : std_logic := '0';
 begin
@@ -134,7 +136,7 @@ U_AI: audio_interface port map(
            micro_clk => micro_clk,
            micro_data => micro_data,
            micro_LR => micro_LR,
-           play_enable => BTNR,
+           play_enable => playing_s,
            sample_in => data_to_amp,
            sample_request => request,
            jack_sd => jack_sd,
@@ -151,7 +153,7 @@ MEM: RAM port map (
            );
 OR2: or_2 port map (
           a => BTNL,
-          b => BTNR,
+          b => playing_s,
           y => or_en
           );
                      
@@ -163,6 +165,7 @@ ADDR: address_manager port map (
           BTNC => BTNC,
           BTNR => BTNR,
           up_dwn => SW0,
+          playing => playing_s,
           address => address_s
           );
 
