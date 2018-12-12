@@ -67,7 +67,6 @@ begin
                 address_standby <= (others => '0');
                 btnr_pressed_reg <= '0';
              elsif (clk_12megas'event and clk_12megas = '1') then 
-                
                 if (btnr_pressed_reg = '0') then
                     last_record_reg <= selection; -- vuelve la reproduccion al origen
                 end if;             
