@@ -143,15 +143,41 @@ INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dse
 INFO: [VRFC 10-307] analyzing entity RAM
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity address_manager
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/and_2_not.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity and_2_not
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/audio_interface.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity audio_interface
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/ca2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ca2
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity controlador_filtro
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity dsed_audio
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/en_4_cycles.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity en_4_cycles
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fir_data_flow
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_filter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fir_filter
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/hold.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity hold
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity multiplexor
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity multiplexor_1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity multiplexor_2
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplicador.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity multiplicador
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/mux_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mux_0_1
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/or_2.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity or_2
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/pwm.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity pwm
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/registro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity registro
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/sumador.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sumador
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sim_1/new/dsed_audio_tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity dsed_audio_tb

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="filtered_to_matlab_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="filtered_to_matlab" />
+            <top_module name="package_dsed" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="575199711610000fs"></ZoomStartTime>
+      <ZoomEndTime time="577131711610001fs"></ZoomEndTime>
+      <Cursor1Time time="576809711610000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="169"></NameColumnWidth>
+      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/clk_12megas" type="logic">
+      <obj_property name="ElementShortName">clk_12megas</obj_property>
+      <obj_property name="ObjectShortName">clk_12megas</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/sample_in" type="array">
+      <obj_property name="ElementShortName">sample_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_in[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/sample_in_ready" type="logic">
+      <obj_property name="ElementShortName">sample_in_ready</obj_property>
+      <obj_property name="ObjectShortName">sample_in_ready</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/c0" type="array">
+      <obj_property name="ElementShortName">c0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c0[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/c1" type="array">
+      <obj_property name="ElementShortName">c1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c1[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/c2" type="array">
+      <obj_property name="ElementShortName">c2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c2[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/c3" type="array">
+      <obj_property name="ElementShortName">c3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c3[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/c4" type="array">
+      <obj_property name="ElementShortName">c4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c4[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/x0" type="array">
+      <obj_property name="ElementShortName">x0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x0[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/x1" type="array">
+      <obj_property name="ElementShortName">x1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x1[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/x2" type="array">
+      <obj_property name="ElementShortName">x2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x2[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/x3" type="array">
+      <obj_property name="ElementShortName">x3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x3[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/x4" type="array">
+      <obj_property name="ElementShortName">x4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x4[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/sample_out_ready" type="logic">
+      <obj_property name="ElementShortName">sample_out_ready</obj_property>
+      <obj_property name="ObjectShortName">sample_out_ready</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/state_reg" type="other">
+      <obj_property name="ElementShortName">state_reg</obj_property>
+      <obj_property name="ObjectShortName">state_reg</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/out_hold" type="array">
+      <obj_property name="ElementShortName">out_hold[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out_hold[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/sample_out" type="other">
+      <obj_property name="ElementShortName">sample_out</obj_property>
+      <obj_property name="ObjectShortName">sample_out</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+</wave_config>

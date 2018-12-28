@@ -11,18 +11,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="973721666333fs"></ZoomStartTime>
-      <ZoomEndTime time="1478221666334fs"></ZoomEndTime>
-      <Cursor1Time time="1394138333000fs"></Cursor1Time>
+      <ZoomStartTime time="746200000000fs"></ZoomStartTime>
+      <ZoomEndTime time="2800200000001fs"></ZoomEndTime>
+      <Cursor1Time time="1022805199000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="209"></NameColumnWidth>
+      <NameColumnWidth column_width="169"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="22" />
-   <wvobject fp_name="/dsed_audio_tb/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
+   <WVObjectSize size="51" />
+   <wvobject fp_name="/dsed_audio_tb/DUT/clk_12megas_s" type="logic">
+      <obj_property name="ElementShortName">clk_12megas_s</obj_property>
+      <obj_property name="ObjectShortName">clk_12megas_s</obj_property>
    </wvobject>
    <wvobject fp_name="/dsed_audio_tb/reset_s" type="logic">
       <obj_property name="ElementShortName">reset_s</obj_property>
@@ -44,10 +44,6 @@
       <obj_property name="ElementShortName">btnc_s</obj_property>
       <obj_property name="ObjectShortName">btnc_s</obj_property>
    </wvobject>
-   <wvobject fp_name="/dsed_audio_tb/btnr_s" type="logic">
-      <obj_property name="ElementShortName">btnr_s</obj_property>
-      <obj_property name="ObjectShortName">btnr_s</obj_property>
-   </wvobject>
    <wvobject fp_name="/dsed_audio_tb/DUT/MEM/addra" type="array">
       <obj_property name="ElementShortName">addra[18:0]</obj_property>
       <obj_property name="ObjectShortName">addra[18:0]</obj_property>
@@ -62,6 +58,10 @@
       <obj_property name="ElementShortName">ena</obj_property>
       <obj_property name="ObjectShortName">ena</obj_property>
    </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/ADDR/sample_ready" type="logic">
+      <obj_property name="ElementShortName">sample_ready</obj_property>
+      <obj_property name="ObjectShortName">sample_ready</obj_property>
+   </wvobject>
    <wvobject fp_name="/dsed_audio_tb/DUT/MEM/wea" type="array">
       <obj_property name="ElementShortName">wea[0:0]</obj_property>
       <obj_property name="ObjectShortName">wea[0:0]</obj_property>
@@ -71,10 +71,6 @@
       <obj_property name="ElementShortName">douta[7:0]</obj_property>
       <obj_property name="ObjectShortName">douta[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/dsed_audio_tb/DUT/ADDR/sample_ready" type="logic">
-      <obj_property name="ElementShortName">sample_ready</obj_property>
-      <obj_property name="ObjectShortName">sample_ready</obj_property>
    </wvobject>
    <wvobject fp_name="/dsed_audio_tb/DUT/ADDR/sample_request" type="logic">
       <obj_property name="ElementShortName">sample_request</obj_property>
@@ -116,5 +112,228 @@
       <obj_property name="ElementShortName">selection[18:0]</obj_property>
       <obj_property name="ObjectShortName">selection[18:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/btnr_s" type="logic">
+      <obj_property name="ElementShortName">btnr_s</obj_property>
+      <obj_property name="ObjectShortName">btnr_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/sw0_s" type="logic">
+      <obj_property name="ElementShortName">sw0_s</obj_property>
+      <obj_property name="ObjectShortName">sw0_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/sw1_s" type="logic">
+      <obj_property name="ElementShortName">sw1_s</obj_property>
+      <obj_property name="ObjectShortName">sw1_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/filter_select" type="logic">
+      <obj_property name="ElementShortName">filter_select</obj_property>
+      <obj_property name="ObjectShortName">filter_select</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/c_0" type="array">
+      <obj_property name="ElementShortName">c_0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c_0[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/c_1" type="array">
+      <obj_property name="ElementShortName">c_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c_1[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/c_2" type="array">
+      <obj_property name="ElementShortName">c_2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c_2[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/c_3" type="array">
+      <obj_property name="ElementShortName">c_3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c_3[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/c_4" type="array">
+      <obj_property name="ElementShortName">c_4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c_4[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/x_0" type="array">
+      <obj_property name="ElementShortName">x_0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x_0[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/x_1" type="array">
+      <obj_property name="ElementShortName">x_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x_1[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/x_2" type="array">
+      <obj_property name="ElementShortName">x_2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x_2[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/x_3" type="array">
+      <obj_property name="ElementShortName">x_3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x_3[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/x_4" type="array">
+      <obj_property name="ElementShortName">x_4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x_4[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/CTRL/state_reg" type="other">
+      <obj_property name="ElementShortName">state_reg</obj_property>
+      <obj_property name="ObjectShortName">state_reg</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/Sample_Out_ready" type="logic">
+      <obj_property name="ElementShortName">Sample_Out_ready</obj_property>
+      <obj_property name="ObjectShortName">Sample_Out_ready</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/Sample_In_enable" type="logic">
+      <obj_property name="ElementShortName">Sample_In_enable</obj_property>
+      <obj_property name="ObjectShortName">Sample_In_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/data_to_filter" type="array">
+      <obj_property name="ElementShortName">data_to_filter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_to_filter[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/Sample_In" type="array">
+      <obj_property name="ElementShortName">Sample_In[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Sample_In[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/data_ca2_inv" type="array">
+      <obj_property name="ElementShortName">data_ca2_inv[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_ca2_inv[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/CA2_INV/comp" type="array">
+      <obj_property name="ElementShortName">comp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">comp[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/FIR/s_0" type="array">
+      <obj_property name="ElementShortName">s_0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_0[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/FIR/s_1" type="array">
+      <obj_property name="ElementShortName">s_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_1[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/FIR/s_2" type="array">
+      <obj_property name="ElementShortName">s_2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_2[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/FIR/s_3" type="array">
+      <obj_property name="ElementShortName">s_3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_3[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/FIR/s_4" type="array">
+      <obj_property name="ElementShortName">s_4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_4[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/FIR/s_5" type="array">
+      <obj_property name="ElementShortName">s_5[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_5[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/FIR/s_6" type="array">
+      <obj_property name="ElementShortName">s_6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_6[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/FIR/s_7" type="array">
+      <obj_property name="ElementShortName">s_7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_7[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/FILTR/FIR/s_8" type="array">
+      <obj_property name="ElementShortName">s_8[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_8[7:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">7</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
 </wave_config>

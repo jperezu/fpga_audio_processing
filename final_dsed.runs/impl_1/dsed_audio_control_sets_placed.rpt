@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Wed Dec 12 13:19:32 2018
+| Date         : Sat Dec 22 00:15:20 2018
 | Host         : DESKTOP-JV0CNOI running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file dsed_audio_control_sets_placed.rpt
 | Design       : dsed_audio
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    10 |
-| Unused register locations in slices containing registers |    35 |
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    52 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,11 +33,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              15 |           10 |
-| No           | No                    | Yes                    |              26 |           15 |
+| No           | No                    | No                     |              68 |           36 |
+| No           | No                    | Yes                    |             108 |           41 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              84 |           40 |
+| Yes          | No                    | Yes                    |             148 |           57 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -45,31 +45,37 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+-----------------------------------------+--------------------------------------------------+------------------+----------------+
-|     Clock Signal     |              Enable Signal              |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count |
-+----------------------+-----------------------------------------+--------------------------------------------------+------------------+----------------+
-|  U_CLK/inst/clk_out1 |                                         | U_AI/U_MICRO/FSM_sequential_state_reg[2]_i_3_n_0 |                1 |              2 |
-|  U_CLK/inst/clk_out1 |                                         | reset_IBUF                                       |                2 |              4 |
-|  U_CLK/inst/clk_out1 | U_AI/U_MICRO/dato1_reg_0                | U_AI/U_MICRO/FSM_sequential_state_reg[2]_i_3_n_0 |                4 |              8 |
-|  U_CLK/inst/clk_out1 | U_AI/U_MICRO/dato2_reg_1                | U_AI/U_MICRO/FSM_sequential_state_reg[2]_i_3_n_0 |                4 |              8 |
-|  U_CLK/inst/clk_out1 | U_AI/U_EN/r_reg_reg[0]_0[0]             | ADDR/AR[0]                                       |                5 |             10 |
-|  U_CLK/inst/clk_out1 |                                         |                                                  |               10 |             15 |
-|  U_CLK/inst/clk_out1 | U_AI/U_MICRO/sample_out_ready_reg_reg_0 | ADDR/last_record_reg0                            |                5 |             19 |
-|  U_CLK/inst/clk_out1 | U_AI/U_PWM/last_record_reg_reg[18][0]   | ADDR/last_record_reg0                            |               10 |             19 |
-|  U_CLK/inst/clk_out1 |                                         | ADDR/last_record_reg0                            |               12 |             20 |
-|  U_CLK/inst/clk_out1 | U_AI/U_EN/en_4                          | U_AI/U_MICRO/FSM_sequential_state_reg[2]_i_3_n_0 |               12 |             20 |
-+----------------------+-----------------------------------------+--------------------------------------------------+------------------+----------------+
++------------------------------------------+-----------------------------------------+--------------------------------------------------+------------------+----------------+
+|               Clock Signal               |              Enable Signal              |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count |
++------------------------------------------+-----------------------------------------+--------------------------------------------------+------------------+----------------+
+|  FILTR/CTRL/filtering_inferred__0/i__n_1 |                                         |                                                  |                1 |              1 |
+|  FILTR/CTRL/sample_out_ready_next_n_1    |                                         |                                                  |                1 |              1 |
+|  FILTR/CTRL/c2_reg[2]_i_1_n_1            |                                         |                                                  |                1 |              2 |
+|  U_CLK/inst/clk_out1                     |                                         | U_AI/U_MICRO/FSM_sequential_state_reg[2]_i_3_n_1 |                1 |              2 |
+|  U_CLK/inst/clk_out1                     | U_AI/U_MICRO/dato1_reg_1                | U_AI/U_MICRO/FSM_sequential_state_reg[2]_i_3_n_1 |                2 |              8 |
+|  U_CLK/inst/clk_out1                     | U_AI/U_MICRO/dato2_reg_0                | U_AI/U_MICRO/FSM_sequential_state_reg[2]_i_3_n_1 |                4 |              8 |
+|  U_CLK/inst/clk_out1                     | SMPL/reg_signal[7]_i_1_n_1              | reset_IBUF                                       |                2 |              8 |
+|  U_CLK/inst/clk_out1                     | FILTR/CTRL/E[0]                         | reset_IBUF                                       |                3 |              8 |
+|  U_CLK/inst/clk_out1                     | U_AI/U_EN/Q[0]                          | ADDR/AR[0]                                       |                4 |             10 |
+|  U_CLK/inst/clk_out1                     |                                         |                                                  |               13 |             16 |
+|  U_CLK/inst/clk_out1                     | U_AI/U_MICRO/sample_out_ready_reg_reg_0 | ADDR/last_record_reg0                            |                5 |             19 |
+|  U_CLK/inst/clk_out1                     | U_AI/U_PWM/last_record_reg_reg[18][0]   | ADDR/last_record_reg0                            |               10 |             19 |
+|  U_CLK/inst/clk_out1                     |                                         | ADDR/last_record_reg0                            |               10 |             20 |
+|  U_CLK/inst/clk_out1                     | U_AI/U_EN/en_4                          | U_AI/U_MICRO/FSM_sequential_state_reg[2]_i_3_n_1 |               10 |             20 |
+|  n_0_50_BUFG                             |                                         |                                                  |               20 |             48 |
+|  U_CLK/inst/clk_out1                     | FILTR/CTRL/filtering                    | reset_IBUF                                       |               17 |             48 |
+|  U_CLK/inst/clk_out1                     |                                         | reset_IBUF                                       |               30 |             86 |
++------------------------------------------+-----------------------------------------+--------------------------------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 2      |                     1 |
-| 4      |                     1 |
-| 8      |                     2 |
+| 1      |                     2 |
+| 2      |                     2 |
+| 8      |                     4 |
 | 10     |                     1 |
-| 15     |                     1 |
-| 16+    |                     4 |
+| 16+    |                     8 |
 +--------+-----------------------+
 
 

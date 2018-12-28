@@ -88,10 +88,10 @@ component RAM
      port (
       addra : in std_logic_vector ( 18 downto 0 );
       clka : in std_logic;
-      dina : in std_logic_vector (7 downto 0);
+      dina : in std_logic_vector (sample_size-1 downto 0);
       ena : in std_logic;
       wea : in std_logic_vector (0 downto 0);
-      douta : out std_logic_vector (7 downto 0)
+      douta : out std_logic_vector (sample_size-1 downto 0)
     );
 end component;
 
@@ -113,9 +113,67 @@ component or_2
            y : out STD_LOGIC);
 end component;
 
+component and_2_not
+    Port ( a : in STD_LOGIC;
+           b : in STD_LOGIC;
+           c : out STD_LOGIC);
+end component;
+
+component and3_not 
+    Port ( a : in STD_LOGIC;
+           b : in STD_LOGIC;
+           c : in STD_LOGIC;
+           d : out STD_LOGIC);
+end component;
+
+component ca2
+    Port ( bin : in std_logic_vector (sample_size-1 downto 0);
+           comp  : out std_logic_vector (sample_size-1 downto 0)); 
+end component;
+
+component cambio_valor
+Port ( clk : in STD_LOGIC;
+       rst : in STD_LOGIC;
+       d : in std_logic_vector (sample_size-1 downto 0);
+       sample_play_enable : out STD_LOGIC);
+end component;
+
+component fir_filter
+    Port ( clk : in STD_LOGIC;
+           Reset : in STD_LOGIC;
+           Sample_In : in signed (sample_size-1 downto 0);
+           Sample_In_enable : in STD_LOGIC;
+           filter_select: in STD_LOGIC; --0 lowpass, 1 highpass
+           Sample_Out : out signed (sample_size-1 downto 0);
+           Sample_Out_ready : out STD_LOGIC);
+end component;
+
+component multiplexor_2 
+    Port ( a0 : in signed (sample_size-1 downto 0);
+           a1 : in signed (sample_size-1 downto 0);
+           ctrl : in STD_LOGIC_VECTOR (1 downto 0);
+           b : out signed (sample_size-1 downto 0));
+end component;
+
+component mux_0_1
+    Port ( a0 : in signed (sample_size-1 downto 0);
+           a1 : in signed (sample_size-1 downto 0);
+           ctrl : in STD_LOGIC;
+           b : out signed (sample_size-1 downto 0));
+end component;
+
+component hold
+    Port ( clk : in STD_LOGIC;
+           rst : in STD_LOGIC;
+           en: in STD_LOGIC;
+           d : in signed (sample_size-1 downto 0);
+           q : out signed (sample_size-1 downto 0));
+end component;
+
 signal clk_12megas_s : std_logic;
-signal data_to_mem, data_to_amp : std_logic_vector (sample_size-1 downto 0);
-signal ready, request, or_en : std_logic;
+signal data_ca2_inv, filt_not_filt, data_filtered : signed (sample_size-1 downto 0);
+signal data_to_mem, data_to_filter, data_to_amp, data_ca2 : std_logic_vector (sample_size-1 downto 0);
+signal ready, request, sample_ready_filter, or_en, up_dwn_s, sample_to_play, sample_enable_s : std_logic;
 signal address_s : std_logic_vector (18 downto 0);
 signal playing_s : std_logic;
 signal always_high : std_logic := '1';
@@ -137,7 +195,7 @@ U_AI: audio_interface port map(
            micro_data => micro_data,
            micro_LR => micro_LR,
            play_enable => playing_s,
-           sample_in => data_to_amp,
+           sample_in => std_logic_vector(filt_not_filt),
            sample_request => request,
            jack_sd => jack_sd,
            jack_pwm => jack_pwm
@@ -147,7 +205,7 @@ MEM: RAM port map (
            addra => address_s,
            clka => clk_12megas_s,
            dina => data_to_mem,
-           douta => data_to_amp,
+           douta => data_to_filter,
            wea(0) => ready,
            ena => or_en
            );
@@ -156,7 +214,11 @@ OR2: or_2 port map (
           b => playing_s,
           y => or_en
           );
-                     
+AND2: and_2_not port map (
+          a => SW1,
+          b => SW0,
+          c => up_dwn_s
+          );                  
 ADDR: address_manager port map (
           clk_12megas => clk_12megas_s,
           reset => reset,
@@ -164,9 +226,56 @@ ADDR: address_manager port map (
           sample_request => request,
           BTNC => BTNC,
           BTNR => BTNR,
-          up_dwn => SW0,
+          up_dwn => up_dwn_s,
           playing => playing_s,
           address => address_s
           );
-
+          
+--SMPL: cambio_valor port map (
+--          clk => clk_12megas_s,
+--          rst => reset,
+--          d  => data_to_filter,
+--          sample_play_enable  => sample_to_play
+--          );
+          
+--AND3: and3_not port map (
+--          a => ready,
+--          b => '1',
+--          c => playing_s,
+--          d => sample_enable_s
+--          ); 
+                                      
+FILTR: fir_filter port map (
+         clk => clk_12megas_s,
+         Reset => reset,
+         Sample_In => signed(data_ca2),
+         Sample_In_enable => request,--sample_enable_s,
+         filter_select => SW0,
+         Sample_Out => data_filtered,
+         Sample_Out_ready => sample_ready_filter
+          );
+          
+CA2_1: ca2 port map (
+        bin => data_to_filter,
+        comp => data_ca2
+        );  
+        
+CA2_INV: ca2 port map (
+        bin => std_logic_vector(data_ca2_inv),
+        comp => data_to_amp
+        );  
+        
+MUX: mux_0_1 port map (
+        a0 => signed(data_to_filter),
+        a1 => signed(data_to_amp),
+        ctrl => SW1,
+        b => filt_not_filt
+        );   
+HLD: hold port map (
+        clk => clk_12megas_s,
+        rst => reset,
+        en => sample_ready_filter,
+        d  => data_filtered,
+        q  => data_ca2_inv
+        );
 end Behavioral;

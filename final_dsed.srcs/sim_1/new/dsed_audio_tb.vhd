@@ -61,7 +61,7 @@ end component;
 signal clk : std_logic;
 constant clk_period: time:= 10 ns;
 signal reset_s, micro_data_s, pwm : std_logic;
-signal btnl_s, btnc_s, btnr_s : std_logic;
+signal btnl_s, btnc_s, btnr_s, sw0_s, sw1_s : std_logic;
 
 begin
 
@@ -71,8 +71,8 @@ DUT: dsed_audio port map(
              BTNL => btnl_s, 
              BTNC => btnc_s,
              BTNR => btnr_s,
-             SW0 => '0',
-             SW1 => '0',
+             SW0 => sw0_s,
+             SW1 => sw1_s,
              micro_data => micro_data_s,
              jack_pwm => pwm
             );
@@ -83,7 +83,8 @@ clk_process :process
                 wait for clk_period/2;
                 clk <= '1';
                 wait for clk_period/2;
-            end process;        
+            end process;    
+                
 stim_process : process
                 begin
                 wait for 40 us;
@@ -91,13 +92,15 @@ stim_process : process
                 btnl_s <= '0';
                 btnc_s <= '0';
                 btnr_s <= '0';
+                sw0_s <= '0';
+                sw1_s <= '1';
                 micro_data_s <= '0';
                 wait for 10 * clk_period;
                 btnl_s <= '1';
                 reset_s <= '0';
                 micro_data_s <= '1';
-                wait for 10 * clk_period;
-                micro_data_s <= '0';
+--                wait for 10 * clk_period;
+--                micro_data_s <= '0';
                 wait for 10 * clk_period;
                 micro_data_s <= '1';
                 wait for 10 * clk_period;
@@ -105,15 +108,32 @@ stim_process : process
                 wait for 100000 * clk_period;
                 btnl_s <= '0';
                 micro_data_s <= '1';
+--                wait for 10 * clk_period;
+--                micro_data_s <= '0';
                 wait for 10 * clk_period;
-                micro_data_s <= '0';
-                wait for 10 * clk_period;
-                micro_data_s <= '1'; 
+                micro_data_s <= '0'; 
                 wait for 10 * clk_period;                 
+                btnr_s <= '1';
+                wait for 100 * clk_period;
+                btnr_s <= '0';
+--                wait for 1000 * clk_period;
+--                sw0_s <= '0';
+--                sw1_s <= '1';
+--                wait for 1000 * clk_period;
+--                sw0_s <= '1';
+--                sw1_s <= '1';
+                wait for 2 ms;
+                sw0_s <= '0';
+                sw1_s <= '0';
                 btnr_s <= '1';
                 wait for 10 * clk_period;
                 btnr_s <= '0';
-                micro_data_s <= '0';
+                wait for 2 ms;
+                sw0_s <= '1';
+                sw1_s <= '1';
+                btnr_s <= '1';
+                wait for 10 * clk_period;
+                btnr_s <= '0';
                 wait for 100005 * clk_period;
                 reset_s <= '1';
                 wait;            

@@ -55,6 +55,8 @@ component blk_mem_gen_0 is
       );
 end component; 
 
+signal dout_s : std_logic_vector (7 downto 0);
+
 begin
 
 MEM: blk_mem_gen_0 port map (

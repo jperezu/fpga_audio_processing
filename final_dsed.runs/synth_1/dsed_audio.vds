@@ -2,27 +2,27 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Wed Dec 12 13:17:51 2018
-# Process ID: 196
+# Start of session at: Sat Dec 22 00:12:38 2018
+# Process ID: 1456
 # Current directory: C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1
 # Command line: vivado.exe -log dsed_audio.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dsed_audio.tcl
 # Log file: C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/dsed_audio.vds
 # Journal file: C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source dsed_audio.tcl -notrace
-Command: synth_design -top dsed_audio -part xc7a100tcsg324-1
+Command: synth_design -top dsed_audio -part xc7a100tcsg324-1 -retiming
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2344 
+INFO: Helper process launched with PID 12508 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 361.551 ; gain = 75.633
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 362.027 ; gain = 75.949
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'dsed_audio' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:55]
-INFO: [Synth 8-3491] module 'clk_12M' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/realtime/clk_12M_stub.vhdl:5' bound to instance 'U_CLK' of component 'clk_12M' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:125]
-INFO: [Synth 8-638] synthesizing module 'clk_12M' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/realtime/clk_12M_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'audio_interface' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/audio_interface.vhd:35' bound to instance 'U_AI' of component 'audio_interface' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:130]
+INFO: [Synth 8-3491] module 'clk_12M' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-1456-DESKTOP-JV0CNOI/realtime/clk_12M_stub.vhdl:5' bound to instance 'U_CLK' of component 'clk_12M' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'clk_12M' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-1456-DESKTOP-JV0CNOI/realtime/clk_12M_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'audio_interface' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/audio_interface.vhd:35' bound to instance 'U_AI' of component 'audio_interface' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:188]
 INFO: [Synth 8-638] synthesizing module 'audio_interface' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/audio_interface.vhd:57]
 INFO: [Synth 8-3491] module 'en_4_cycles' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/en_4_cycles.vhd:34' bound to instance 'U_EN' of component 'en_4_cycles' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/audio_interface.vhd:89]
 INFO: [Synth 8-638] synthesizing module 'en_4_cycles' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/en_4_cycles.vhd:43]
@@ -35,21 +35,77 @@ INFO: [Synth 8-3491] module 'pwm' declared at 'C:/Users/Jorge/Documents/VHDL/fin
 INFO: [Synth 8-638] synthesizing module 'pwm' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/pwm.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'pwm' (3#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/pwm.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'audio_interface' (4#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/audio_interface.vhd:57]
-INFO: [Synth 8-3491] module 'RAM' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:34' bound to instance 'MEM' of component 'RAM' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:146]
+INFO: [Synth 8-3491] module 'RAM' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:34' bound to instance 'MEM' of component 'RAM' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:204]
 INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:45]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'MEM' of component 'blk_mem_gen_0' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:60]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/realtime/blk_mem_gen_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-1456-DESKTOP-JV0CNOI/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'MEM' of component 'blk_mem_gen_0' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-1456-DESKTOP-JV0CNOI/realtime/blk_mem_gen_0_stub.vhdl:17]
 INFO: [Synth 8-256] done synthesizing module 'RAM' (5#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/RAM.vhd:45]
-INFO: [Synth 8-3491] module 'or_2' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/or_2.vhd:34' bound to instance 'OR2' of component 'or_2' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:154]
+INFO: [Synth 8-3491] module 'or_2' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/or_2.vhd:34' bound to instance 'OR2' of component 'or_2' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:212]
 INFO: [Synth 8-638] synthesizing module 'or_2' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/or_2.vhd:40]
 INFO: [Synth 8-256] done synthesizing module 'or_2' (6#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/or_2.vhd:40]
-INFO: [Synth 8-3491] module 'address_manager' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:34' bound to instance 'ADDR' of component 'address_manager' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:160]
+INFO: [Synth 8-3491] module 'and_2_not' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/and_2_not.vhd:34' bound to instance 'AND2' of component 'and_2_not' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:217]
+INFO: [Synth 8-638] synthesizing module 'and_2_not' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/and_2_not.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'and_2_not' (7#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/and_2_not.vhd:40]
+INFO: [Synth 8-3491] module 'address_manager' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:34' bound to instance 'ADDR' of component 'address_manager' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:222]
 INFO: [Synth 8-638] synthesizing module 'address_manager' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'address_manager' (7#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'dsed_audio' (8#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:55]
-WARNING: [Synth 8-3331] design dsed_audio has unconnected port SW1
+INFO: [Synth 8-256] done synthesizing module 'address_manager' (8#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:46]
+INFO: [Synth 8-3491] module 'cambio_valor' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/cambio_valor.vhd:35' bound to instance 'SMPL' of component 'cambio_valor' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:234]
+INFO: [Synth 8-638] synthesizing module 'cambio_valor' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/cambio_valor.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'cambio_valor' (9#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/cambio_valor.vhd:42]
+INFO: [Synth 8-3491] module 'and3_not' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/and3_not.vhd:34' bound to instance 'AND3' of component 'and3_not' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:241]
+INFO: [Synth 8-638] synthesizing module 'and3_not' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/and3_not.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'and3_not' (10#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/and3_not.vhd:41]
+INFO: [Synth 8-3491] module 'fir_filter' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_filter.vhd:35' bound to instance 'FILTR' of component 'fir_filter' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:248]
+INFO: [Synth 8-638] synthesizing module 'fir_filter' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_filter.vhd:46]
+INFO: [Synth 8-3491] module 'fir_data_flow' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:35' bound to instance 'FIR' of component 'fir_data_flow' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_filter.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'fir_data_flow' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:55]
+INFO: [Synth 8-3491] module 'multiplexor' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor.vhd:34' bound to instance 'MUX1' of component 'multiplexor' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'multiplexor' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'multiplexor' (11#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor.vhd:44]
+INFO: [Synth 8-3491] module 'multiplexor' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor.vhd:34' bound to instance 'MUX2' of component 'multiplexor' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:113]
+INFO: [Synth 8-3491] module 'multiplicador' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplicador.vhd:34' bound to instance 'H_M' of component 'multiplicador' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'multiplicador' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplicador.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'multiplicador' (12#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplicador.vhd:40]
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/registro.vhd:36' bound to instance 'R1' of component 'registro' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'registro' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/registro.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'registro' (13#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/registro.vhd:43]
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/registro.vhd:36' bound to instance 'R2' of component 'registro' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:136]
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/registro.vhd:36' bound to instance 'R3' of component 'registro' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:143]
+INFO: [Synth 8-3491] module 'multiplexor_2' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor_2.vhd:34' bound to instance 'MUX3' of component 'multiplexor_2' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'multiplexor_2' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor_2.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'multiplexor_2' (14#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor_2.vhd:41]
+INFO: [Synth 8-3491] module 'sumador' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/sumador.vhd:34' bound to instance 'ADD' of component 'sumador' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'sumador' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/sumador.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'sumador' (15#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/sumador.vhd:40]
+INFO: [Synth 8-3491] module 'multiplexor_1' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor_1.vhd:34' bound to instance 'MUX4' of component 'multiplexor_1' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'multiplexor_1' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor_1.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'multiplexor_1' (16#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/multiplexor_1.vhd:40]
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/registro.vhd:36' bound to instance 'R4' of component 'registro' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:169]
+INFO: [Synth 8-256] done synthesizing module 'fir_data_flow' (17#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_data_flow.vhd:55]
+INFO: [Synth 8-3491] module 'controlador_filtro' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:35' bound to instance 'CTRL' of component 'controlador_filtro' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_filter.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'controlador_filtro' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:57]
+WARNING: [Synth 8-614] signal 'sample_in' is read in the process but is not in the sensitivity list [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:92]
+WARNING: [Synth 8-614] signal 'x_hold_reg' is read in the process but is not in the sensitivity list [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:92]
+WARNING: [Synth 8-614] signal 'x0_reg' is read in the process but is not in the sensitivity list [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:92]
+WARNING: [Synth 8-614] signal 'x1_reg' is read in the process but is not in the sensitivity list [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:92]
+WARNING: [Synth 8-614] signal 'x2_reg' is read in the process but is not in the sensitivity list [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:92]
+WARNING: [Synth 8-614] signal 'x3_reg' is read in the process but is not in the sensitivity list [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'controlador_filtro' (18#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'fir_filter' (19#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/fir_filter.vhd:46]
+INFO: [Synth 8-3491] module 'ca2' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/ca2.vhd:35' bound to instance 'CA2_1' of component 'ca2' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:258]
+INFO: [Synth 8-638] synthesizing module 'ca2' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/ca2.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'ca2' (20#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/ca2.vhd:41]
+INFO: [Synth 8-3491] module 'ca2' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/ca2.vhd:35' bound to instance 'CA2_INV' of component 'ca2' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:263]
+INFO: [Synth 8-3491] module 'mux_0_1' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/mux_0_1.vhd:34' bound to instance 'MUX' of component 'mux_0_1' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:268]
+INFO: [Synth 8-638] synthesizing module 'mux_0_1' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/mux_0_1.vhd:41]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/mux_0_1.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'mux_0_1' (21#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/mux_0_1.vhd:41]
+INFO: [Synth 8-3491] module 'hold' declared at 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/hold.vhd:35' bound to instance 'HLD' of component 'hold' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:274]
+INFO: [Synth 8-638] synthesizing module 'hold' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/hold.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'hold' (22#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/hold.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'dsed_audio' (23#1) [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd:55]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 401.875 ; gain = 115.957
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 402.359 ; gain = 116.281
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -59,17 +115,17 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 401.875 ; gain = 115.957
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 402.359 ; gain = 116.281
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc] for cell 'U_CLK'
-Finished Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc] for cell 'U_CLK'
-Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'MEM/MEM'
-Finished Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'MEM/MEM'
+Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-1456-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc] for cell 'U_CLK'
+Finished Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-1456-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc] for cell 'U_CLK'
+Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-1456-DESKTOP-JV0CNOI/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'MEM/MEM'
+Finished Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-1456-DESKTOP-JV0CNOI/dcp7/blk_mem_gen_0_in_context.xdc] for cell 'MEM/MEM'
 Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/Nexys4DDR_Master.xdc]
 Finished Parsing XDC File [C:/Users/Jorge/Documents/VHDL/final_dsed/Nexys4DDR_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jorge/Documents/VHDL/final_dsed/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dsed_audio_propImpl.xdc].
@@ -79,26 +135,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 713.863 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 715.395 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-196-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-1456-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100Mhz. (constraint file  C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/.Xil/Vivado-1456-DESKTOP-JV0CNOI/dcp5/clk_12M_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for MEM/MEM. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for U_CLK. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'FSMD_microphone'
 WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/FSMD_microphone.vhd:67]
@@ -107,7 +163,16 @@ INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "sample_request" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:77]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/address_manager.vhd:76]
+WARNING: [Synth 8-6014] Unused sequential element c3_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element c4_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:104]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'controlador_filtro'
+WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:69]
+INFO: [Synth 8-5544] ROM "control_in" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "control_flow" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "control_add" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sample_out_ready_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/FSMD_microphone.vhd:67]
 WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/FSMD_microphone.vhd:67]
 ---------------------------------------------------------------------------------------------------
@@ -121,8 +186,35 @@ WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'FSMD_microphone'
 WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/FSMD_microphone.vhd:67]
+WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:69]
+WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:69]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                      t1 |                              001 |                              001
+                      t2 |                              010 |                              010
+                      t3 |                              011 |                              011
+                      t4 |                              100 |                              100
+                      t5 |                              101 |                              101
+                      t6 |                              110 |                              110
+                      t7 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'controlador_filtro'
+WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:69]
+WARNING: [Synth 8-327] inferring latch for variable 'c0_reg' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:100]
+WARNING: [Synth 8-327] inferring latch for variable 'c1_reg' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:101]
+WARNING: [Synth 8-327] inferring latch for variable 'c2_reg' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:102]
+WARNING: [Synth 8-327] inferring latch for variable 'filtering_reg' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:80]
+WARNING: [Synth 8-327] inferring latch for variable 'x0_next_reg' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:82]
+WARNING: [Synth 8-327] inferring latch for variable 'x1_next_reg' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:83]
+WARNING: [Synth 8-327] inferring latch for variable 'x2_next_reg' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:84]
+WARNING: [Synth 8-327] inferring latch for variable 'x3_next_reg' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:85]
+WARNING: [Synth 8-327] inferring latch for variable 'x4_next_reg' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:86]
+WARNING: [Synth 8-327] inferring latch for variable 'sample_out_ready_next_reg' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:78]
+WARNING: [Synth 8-327] inferring latch for variable 'x_hold_next_reg' [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd:81]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -137,25 +229,32 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     19 Bit       Adders := 2     
 	   2 Input      9 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 3     
 	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
 +---Registers : 
 	               19 Bit    Registers := 3     
 	                9 Bit    Registers := 2     
-	                8 Bit    Registers := 3     
+	                8 Bit    Registers := 15    
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
 +---Muxes : 
 	   2 Input     19 Bit        Muxes := 6     
 	   5 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 7     
 	   5 Input      8 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	  10 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 6     
 	   5 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -208,6 +307,51 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     19 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 3     
+Module cambio_valor 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module registro 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module multiplexor_2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module sumador 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+Module multiplexor_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module controlador_filtro 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 6     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 6     
+Module ca2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
+Module mux_0_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module hold 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -228,10 +372,33 @@ INFO: [Synth 8-5546] ROM "U_AI/U_PWM/sample_request" won't be mapped to RAM beca
 WARNING: [Synth 8-6014] Unused sequential element U_AI/U_PWM/r_reg_reg was removed.  [C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/pwm.vhd:60]
 WARNING: [Synth 8-3917] design dsed_audio has port micro_LR driven by constant 0
 WARNING: [Synth 8-3917] design dsed_audio has port jack_sd driven by constant 1
-WARNING: [Synth 8-3331] design dsed_audio has unconnected port SW1
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c2_reg[7]' (LD) to 'FILTR/CTRL/c2_reg[1]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c0_reg[7]' (LD) to 'FILTR/CTRL/c1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c1_reg[7]' (LD) to 'FILTR/CTRL/c1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c2_reg[6]' (LD) to 'FILTR/CTRL/c1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c0_reg[6]' (LD) to 'FILTR/CTRL/c1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c1_reg[6]' (LD) to 'FILTR/CTRL/c1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c2_reg[5]' (LD) to 'FILTR/CTRL/c2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c0_reg[5]' (LD) to 'FILTR/CTRL/c1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c1_reg[5]' (LD) to 'FILTR/CTRL/c2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c2_reg[4]' (LD) to 'FILTR/CTRL/c1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c0_reg[4]' (LD) to 'FILTR/CTRL/c2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c1_reg[4]' (LD) to 'FILTR/CTRL/c1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c2_reg[3]' (LD) to 'FILTR/CTRL/c2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c0_reg[3]' (LD) to 'FILTR/CTRL/c2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c1_reg[3]' (LD) to 'FILTR/CTRL/c1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c2_reg[0]' (LD) to 'FILTR/CTRL/c1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c0_reg[0]' (LD) to 'FILTR/CTRL/c1_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\FILTR/CTRL/c2_reg[1] )
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c0_reg[1]' (LD) to 'FILTR/CTRL/c2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c1_reg[1]' (LD) to 'FILTR/CTRL/c1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'FILTR/CTRL/c0_reg[2]' (LD) to 'FILTR/CTRL/c1_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\FILTR/CTRL/c1_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (FILTR/CTRL/c2_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/CTRL/c1_reg[2]) is unused and will be removed from module dsed_audio.
 WARNING: [Synth 8-3332] Sequential element (U_AI/U_EN/cuenta_reg[2]) is unused and will be removed from module dsed_audio.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -245,13 +412,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'U_CLK/clk_out1' to pin 'U_CLK/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,8 +429,177 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `dsed_audio`
+	Effective logic levels on critical path before retiming is: 10
+	Total number of crtical paths = 18
+
+	Optimizing at the module level
+	Optimizing locally to improve critical paths(may not reduce worst delay)
+
+	Effective logic levels on critical path after retiming is: 6
+	Total number of crtical paths = 42
+	Numbers of forward move = 0, and backward move = 31
+
+	Retimed registers names:
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__11
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__12
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__13
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__14
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__15
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__16
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__17
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__18
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__19
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__20
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__21
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__22
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__23
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__24
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__25
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__26
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__27
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__28
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__29
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__30
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__31
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__32
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__33
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__34
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__35
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__36
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__37
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__38
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__39
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__40
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__41
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__42
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__43
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__44
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__45
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__46
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__47
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__48
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__49
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__50
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__51
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__52
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__53
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__54
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__55
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__56
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__57
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__58
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__59
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__60
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__61
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__62
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__63
+		FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__64
+ 
+
+INFO: [Synth 8-5816] Retiming module `dsed_audio' done
+
+
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[6]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[5]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[4]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[3]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[2]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[1]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[0]) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__0) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__1) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__2) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__3) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__4) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__5) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__6) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__7) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__8) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__9) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__0) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__1) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__2) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__3) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__4) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__5) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__6) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__7) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__8) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__9) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret_bret__10) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__0) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__1) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__2) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__3) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__4) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__5) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__6) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__7) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__8) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__9) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__10) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__11) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__12) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__13) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__14) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__15) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__16) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__17) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__18) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__19) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret__20) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__10) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__11) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__12) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__13) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__14) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__15) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__16) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__17) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__18) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__19) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__20) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__21) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__22) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__23) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__24) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__25) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__26) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__27) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__28) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__29) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__30) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__31) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__32) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__33) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__34) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__35) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__36) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__37) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__38) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__39) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__40) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__41) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__42) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__43) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__44) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__45) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__46) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__47) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__48) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__49) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__50) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__51) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__52) is unused and will be removed from module dsed_audio.
+WARNING: [Synth 8-3332] Sequential element (FILTR/FIR/R1/reg_signal_reg[7]_bret_bret__53) is unused and will be removed from module dsed_audio.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -287,7 +623,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -300,7 +636,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -312,25 +648,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -350,50 +686,62 @@ Report Cell Usage:
 +------+-------------------+------+
 |1     |blk_mem_gen_0_bbox |     1|
 |2     |clk_12M_bbox       |     1|
-|3     |CARRY4             |    15|
-|4     |LUT1               |    24|
-|5     |LUT2               |    44|
-|6     |LUT3               |    10|
-|7     |LUT4               |    41|
-|8     |LUT5               |    61|
-|9     |LUT6               |    66|
-|10    |MUXF7              |     8|
-|11    |FDCE               |   109|
+|3     |BUFG               |     1|
+|4     |CARRY4             |    29|
+|5     |LUT1               |    54|
+|6     |LUT2               |    54|
+|7     |LUT3               |    29|
+|8     |LUT4               |    62|
+|9     |LUT5               |    87|
+|10    |LUT6               |   145|
+|11    |FDCE               |   255|
 |12    |FDPE               |     1|
-|13    |FDRE               |     1|
-|14    |IBUF               |     6|
-|15    |OBUF               |     4|
+|13    |FDRE               |     2|
+|14    |LD                 |    52|
+|15    |IBUF               |     7|
+|16    |OBUF               |     4|
 +------+-------------------+------+
 
 Report Instance Areas: 
-+------+------------+----------------+------+
-|      |Instance    |Module          |Cells |
-+------+------------+----------------+------+
-|1     |top         |                |   399|
-|2     |  ADDR      |address_manager |   199|
-|3     |  MEM       |RAM             |    14|
-|4     |  U_AI      |audio_interface |   175|
-|5     |    U_EN    |en_4_cycles     |     7|
-|6     |    U_MICRO |FSMD_microphone |   130|
-|7     |    U_PWM   |pwm             |    38|
-+------+------------+----------------+------+
++------+------------+-------------------+------+
+|      |Instance    |Module             |Cells |
++------+------------+-------------------+------+
+|1     |top         |                   |   791|
+|2     |  ADDR      |address_manager    |   201|
+|3     |  FILTR     |fir_filter         |   361|
+|4     |    CTRL    |controlador_filtro |   212|
+|5     |    FIR     |fir_data_flow      |   149|
+|6     |      H_M   |multiplicador      |    29|
+|7     |      R1    |registro           |    88|
+|8     |      R2    |registro_0         |     8|
+|9     |      R3    |registro_1         |    16|
+|10    |      R4    |registro_2         |     8|
+|11    |  HLD       |hold               |    24|
+|12    |  MEM       |RAM                |     9|
+|13    |  SMPL      |cambio_valor       |    15|
+|14    |  U_AI      |audio_interface    |   168|
+|15    |    U_EN    |en_4_cycles        |     7|
+|16    |    U_MICRO |FSMD_microphone    |   128|
+|17    |    U_PWM   |pwm                |    33|
++------+------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 715.395 ; gain = 429.316
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 713.863 ; gain = 115.957
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 713.863 ; gain = 427.945
+Synthesis finished with 0 errors, 0 critical warnings and 133 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 715.395 ; gain = 116.281
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 715.395 ; gain = 429.316
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 52 instances were transformed.
+  LD => LDCE: 52 instances
 
-50 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+133 Infos, 131 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 713.863 ; gain = 433.148
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:46 . Memory (MB): peak = 715.395 ; gain = 433.527
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.runs/synth_1/dsed_audio.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 713.863 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 12 13:18:29 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.200 . Memory (MB): peak = 715.395 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 22 00:14:01 2018...

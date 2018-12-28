@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Wed Dec 12 13:20:15 2018
+| Date         : Sat Dec 22 00:15:59 2018
 | Host         : DESKTOP-JV0CNOI running 64-bit major release  (build 9200)
 | Command      : report_drc -file dsed_audio_drc_routed.rpt -pb dsed_audio_drc_routed.pb -rpx dsed_audio_drc_routed.rpx
 | Design       : dsed_audio
@@ -24,12 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 22
+             Violations found: 25
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
 | CHECK-3   | Warning  | Report rule limit reached                           | 1          |
+| PDRC-153  | Warning  | Gated clock check                                   | 3          |
 | REQP-1839 | Warning  | RAMB36 async control check                          | 20         |
 +-----------+----------+-----------------------------------------------------+------------+
 
@@ -51,6 +52,21 @@ Related violations: <none>
 CHECK-3#1 Warning
 Report rule limit reached  
 REQP-1839 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net FILTR/CTRL/c2_reg[2]_i_1_n_1 is a gated clock net sourced by a combinational pin FILTR/CTRL/c2_reg[2]_i_1/O, cell FILTR/CTRL/c2_reg[2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net FILTR/CTRL/filtering_inferred__0/i__n_1 is a gated clock net sourced by a combinational pin FILTR/CTRL/filtering_inferred__0/i_/O, cell FILTR/CTRL/filtering_inferred__0/i_. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net FILTR/CTRL/sample_out_ready_next_n_1 is a gated clock net sourced by a combinational pin FILTR/CTRL/sample_out_ready_next/O, cell FILTR/CTRL/sample_out_ready_next. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 REQP-1839#1 Warning
