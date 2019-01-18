@@ -102,7 +102,7 @@ rw_process : PROCESS
     VARIABLE in_int : integer;
     VARIABLE in_read_ok : BOOLEAN;
     
-    FILE out_file : text OPEN write_mode IS "C:/Users/Jorge/Desktop/Ingenieria Teleco/DSED/sample_out.dat";
+    FILE out_file : text OPEN write_mode IS "C:/Users/Jorge/Desktop/Ingenieria Teleco/DSED/sample_out_low.dat";
     VARIABLE out_line : line;
     
     BEGIN

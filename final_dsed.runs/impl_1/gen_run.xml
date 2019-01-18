@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1545433954">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1547137273">
   <File Type="PWROPT-DRC" Name="dsed_audio_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="dsed_audio_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="dsed_audio_timing_summary_init.rpt"/>
@@ -81,12 +81,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/address_manager.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/and3_not.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -202,6 +196,20 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/dsed_audio.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux_sel.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/and3_not.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>

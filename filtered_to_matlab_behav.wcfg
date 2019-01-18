@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="575199711610000fs"></ZoomStartTime>
-      <ZoomEndTime time="577131711610001fs"></ZoomEndTime>
-      <Cursor1Time time="576809711610000fs"></Cursor1Time>
+      <ZoomStartTime time="80985054120000fs"></ZoomStartTime>
+      <ZoomEndTime time="80986065120001fs"></ZoomEndTime>
+      <Cursor1Time time="80985343790000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="169"></NameColumnWidth>
-      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+      <ValueColumnWidth column_width="74"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="18" />
    <wvobject fp_name="/filtered_to_matlab/FIR/CTRL/clk_12megas" type="logic">
       <obj_property name="ElementShortName">clk_12megas</obj_property>
       <obj_property name="ObjectShortName">clk_12megas</obj_property>
@@ -137,10 +137,15 @@
       <obj_property name="radix_fractionWidth">7</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
    </wvobject>
+   <wvobject fp_name="/filtered_to_matlab/FIR/FIR/y" type="array">
+      <obj_property name="ElementShortName">y[7:0]</obj_property>
+      <obj_property name="ObjectShortName">y[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="/filtered_to_matlab/out_hold" type="array">
       <obj_property name="ElementShortName">out_hold[7:0]</obj_property>
       <obj_property name="ObjectShortName">out_hold[7:0]</obj_property>
-      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">7</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>

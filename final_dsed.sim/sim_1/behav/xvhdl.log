@@ -149,6 +149,8 @@ INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dse
 INFO: [VRFC 10-307] analyzing entity audio_interface
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/ca2.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity ca2
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/cambio_valor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity cambio_valor
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/controlador_filtro.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity controlador_filtro
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Jorge/Documents/VHDL/final_dsed/final_dsed.srcs/sources_1/new/dsed_audio.vhd" into library xil_defaultlib

@@ -134,7 +134,7 @@ end component;
 component cambio_valor
 Port ( clk : in STD_LOGIC;
        rst : in STD_LOGIC;
-       d : in std_logic_vector (sample_size-1 downto 0);
+       d : in std_logic_vector ( 18 downto 0 );
        sample_play_enable : out STD_LOGIC);
 end component;
 
@@ -156,10 +156,10 @@ component multiplexor_2
 end component;
 
 component mux_0_1
-    Port ( a0 : in signed (sample_size-1 downto 0);
-           a1 : in signed (sample_size-1 downto 0);
+    Port ( a0 : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
+           a1 : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
            ctrl : in STD_LOGIC;
-           b : out signed (sample_size-1 downto 0));
+           b : out STD_LOGIC_VECTOR (sample_size-1 downto 0));
 end component;
 
 component hold
@@ -171,11 +171,11 @@ component hold
 end component;
 
 signal clk_12megas_s : std_logic;
-signal data_ca2_inv, filt_not_filt, data_filtered : signed (sample_size-1 downto 0);
-signal data_to_mem, data_to_filter, data_to_amp, data_ca2 : std_logic_vector (sample_size-1 downto 0);
+signal data_ca2_inv, data_filtered : signed (sample_size-1 downto 0);
+signal data_to_mem, data_to_filter, data_to_amp, filt_not_filt, data_ca2 : std_logic_vector (sample_size-1 downto 0);
 signal ready, request, sample_ready_filter, or_en, up_dwn_s, sample_to_play, sample_enable_s : std_logic;
 signal address_s : std_logic_vector (18 downto 0);
-signal playing_s : std_logic;
+signal playing_s: std_logic;
 signal always_high : std_logic := '1';
 signal always_down : std_logic := '0';
 begin
@@ -195,7 +195,7 @@ U_AI: audio_interface port map(
            micro_data => micro_data,
            micro_LR => micro_LR,
            play_enable => playing_s,
-           sample_in => std_logic_vector(filt_not_filt),
+           sample_in => filt_not_filt,
            sample_request => request,
            jack_sd => jack_sd,
            jack_pwm => jack_pwm
@@ -231,30 +231,23 @@ ADDR: address_manager port map (
           address => address_s
           );
           
---SMPL: cambio_valor port map (
---          clk => clk_12megas_s,
---          rst => reset,
---          d  => data_to_filter,
---          sample_play_enable  => sample_to_play
---          );
-          
---AND3: and3_not port map (
---          a => ready,
---          b => '1',
---          c => playing_s,
---          d => sample_enable_s
---          ); 
+CHNG: cambio_valor port map (
+          clk => clk_12megas_s,
+          rst => reset,
+          d => address_s,
+          sample_play_enable => sample_enable_s
+        );
                                       
 FILTR: fir_filter port map (
          clk => clk_12megas_s,
          Reset => reset,
          Sample_In => signed(data_ca2),
-         Sample_In_enable => request,--sample_enable_s,
+         Sample_In_enable => request,
          filter_select => SW0,
          Sample_Out => data_filtered,
          Sample_Out_ready => sample_ready_filter
-          );
-          
+          );     
+               
 CA2_1: ca2 port map (
         bin => data_to_filter,
         comp => data_ca2
@@ -266,11 +259,12 @@ CA2_INV: ca2 port map (
         );  
         
 MUX: mux_0_1 port map (
-        a0 => signed(data_to_filter),
-        a1 => signed(data_to_amp),
+        a0 => data_to_filter,
+        a1 => data_to_amp,
         ctrl => SW1,
         b => filt_not_filt
         );   
+        
 HLD: hold port map (
         clk => clk_12megas_s,
         rst => reset,

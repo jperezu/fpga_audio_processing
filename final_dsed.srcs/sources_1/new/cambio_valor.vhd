@@ -35,13 +35,13 @@ use IEEE.NUMERIC_STD.ALL;
 entity cambio_valor is
 Port ( clk : in STD_LOGIC;
        rst : in STD_LOGIC;
-       d : in std_logic_vector (sample_size-1 downto 0);
+       d : in std_logic_vector ( 18 downto 0 );
        sample_play_enable : out STD_LOGIC);
 end cambio_valor;
 
 architecture Behavioral of cambio_valor is
 
-signal reg_signal :  std_logic_vector (sample_size-1 downto 0);
+signal reg_signal :  std_logic_vector ( 18 downto 0 );
 signal signal_changed : std_logic;
 begin
 

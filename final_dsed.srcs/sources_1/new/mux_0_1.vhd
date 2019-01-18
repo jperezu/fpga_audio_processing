@@ -32,15 +32,15 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity mux_0_1 is
-    Port ( a0 : in signed (sample_size-1 downto 0);
-           a1 : in signed (sample_size-1 downto 0);
+    Port ( a0 : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
+           a1 : in STD_LOGIC_VECTOR (sample_size-1 downto 0);
            ctrl : in STD_LOGIC;
-           b : out signed (sample_size-1 downto 0));
+           b : out STD_LOGIC_VECTOR (sample_size-1 downto 0));
 end mux_0_1;
 
 architecture Behavioral of mux_0_1 is
 
-signal  zero : signed (sample_size-1 downto 0) := (others => '0');
+signal  zero : STD_LOGIC_VECTOR (sample_size-1 downto 0) := (others => '0');
 begin
 
 with ctrl select

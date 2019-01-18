@@ -98,6 +98,7 @@ stim_process : process
                 wait for 10 * clk_period;
                 btnl_s <= '1';
                 reset_s <= '0';
+                 reset_s <= '1';
                 micro_data_s <= '1';
 --                wait for 10 * clk_period;
 --                micro_data_s <= '0';

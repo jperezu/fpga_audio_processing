@@ -104,9 +104,9 @@ begin
                            dato1 <= std_logic_vector(unsigned(dato1_reg) + 1);
                            dato2 <= std_logic_vector(unsigned(dato2_reg) + 1); 
                        end if;
-                        if (std_logic_vector(to_unsigned(105,9)) <= cuenta and cuenta <= std_logic_vector(to_unsigned(149,9))) then
+                        if (std_logic_vector(to_unsigned(105,9)) <= cuenta_reg and cuenta_reg <= std_logic_vector(to_unsigned(149,9))) then
                             state_next <= cont2;
-                        elsif (std_logic_vector(to_unsigned(255,9)) <= cuenta) then
+                        elsif (std_logic_vector(to_unsigned(255,9)) <= cuenta_reg) then
                             state_next <= cont1;
                         else 
                             state_next <= muestreo;
@@ -117,14 +117,14 @@ begin
                        if (micro_data = '1') then
                            dato1 <= std_logic_vector(unsigned(dato1_reg) + 1);
                            end if;
-                       if (primer_ciclo_reg = '1' and cuenta = std_logic_vector(to_unsigned(106,9)) ) then 
+                       if (primer_ciclo_reg = '1' and cuenta_reg = std_logic_vector(to_unsigned(106,9)) ) then 
                            dato2 <= (others => '0');                       
                            sample_out_signal <= dato2_reg;
                            sample_out_ready_signal <= enable_4_cycles;
                        else 
                            sample_out_ready_signal <= '0';
                        end if; 
-                        if (std_logic_vector(to_unsigned(149,9)) <= cuenta) then
+                        if (std_logic_vector(to_unsigned(149,9)) <= cuenta_reg) then
                             state_next <= muestreo;
                         else
                             state_next <= cont2;
@@ -134,14 +134,14 @@ begin
                         if (micro_data = '1') then
                              dato2 <= std_logic_vector(unsigned(dato2_reg) + 1);
                              end if;
-                         if (cuenta = std_logic_vector(to_unsigned(256,9)) ) then 
+                         if (cuenta_reg = std_logic_vector(to_unsigned(256,9)) ) then 
                              dato1 <= (others => '0');
                              sample_out_signal <= dato1_reg;
                              sample_out_ready_signal <= enable_4_cycles;
                          else 
                              sample_out_ready_signal <= '0';
                          end if; 
-                        if (std_logic_vector(to_unsigned(298,9)) <= cuenta) then
+                        if (std_logic_vector(to_unsigned(298,9)) <= cuenta_reg) then
                             state_next <= restart;
                         else 
                             state_next <= cont1;
