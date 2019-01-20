@@ -48,7 +48,10 @@ entity dsed_audio is
         micro_LR : out STD_LOGIC;
         --To/From the mini-jack
         jack_sd : out STD_LOGIC;
-        jack_pwm : out STD_LOGIC
+        jack_pwm : out STD_LOGIC;
+        --7-segments display
+        segments : out std_logic_vector (6 downto 0);
+        an_sel : out std_logic_vector (7 downto 0)
     );
 end dsed_audio;
 
@@ -104,7 +107,34 @@ component address_manager
           BTNR : in STD_LOGIC;
           up_dwn : in STD_LOGIC;
           playing : out STD_LOGIC;
+          last_recorded : out  std_logic_vector (18 downto 0);
           address : out STD_LOGIC_VECTOR (18 downto 0));
+end component;
+
+component seconds_calculator 
+    Port (last_dir : in std_logic_vector (18 downto 0);
+          current_dir : in std_logic_vector (18 downto 0);
+          playing : in STD_LOGIC;
+          BTNL : in STD_LOGIC;
+          up_dwn : in STD_LOGIC;
+          seconds : out  std_logic_vector (4 downto 0));   
+end component;
+
+component seconds_display
+  Port (seconds : in  std_logic_vector (4 downto 0);
+        display_dec : out std_logic_vector (6 downto 0);
+        display_un : out std_logic_vector (6 downto 0)
+        );
+end component;
+
+component refresco
+  Port (clk_12megas : in STD_LOGIC; 
+        reset : in STD_LOGIC;
+        display_dec : in std_logic_vector (6 downto 0);
+        display_un : in std_logic_vector (6 downto 0);
+        number : out std_logic_vector (6 downto 0);
+        select_disp : out std_logic_vector (7 downto 0)
+   );
 end component;
 
 component or_2
@@ -171,11 +201,14 @@ component hold
 end component;
 
 signal clk_12megas_s : std_logic;
+signal last_recorded_s :  std_logic_vector (18 downto 0);
+signal seconds_s : std_logic_vector (4 downto 0);
 signal data_ca2_inv, data_filtered : signed (sample_size-1 downto 0);
 signal data_to_mem, data_to_filter, data_to_amp, filt_not_filt, data_ca2 : std_logic_vector (sample_size-1 downto 0);
 signal ready, request, sample_ready_filter, or_en, up_dwn_s, sample_to_play, sample_enable_s : std_logic;
 signal address_s : std_logic_vector (18 downto 0);
-signal playing_s: std_logic;
+signal dec_s, un_s : std_logic_vector (6 downto 0);
+signal playing_s : std_logic;
 signal always_high : std_logic := '1';
 signal always_down : std_logic := '0';
 begin
@@ -228,15 +261,36 @@ ADDR: address_manager port map (
           BTNR => BTNR,
           up_dwn => up_dwn_s,
           playing => playing_s,
+          last_recorded => last_recorded_s,
           address => address_s
           );
-          
-CHNG: cambio_valor port map (
-          clk => clk_12megas_s,
-          rst => reset,
-          d => address_s,
-          sample_play_enable => sample_enable_s
-        );
+SCND: seconds_calculator port map (
+          last_dir => last_recorded_s,
+          current_dir => address_s,
+          playing => playing_s,
+          BTNL => BTNL,
+          up_dwn => up_dwn_s,
+          seconds => seconds_s
+          );       
+DISP: seconds_display port map (
+          seconds => seconds_s,
+          display_dec => dec_s,
+          display_un => un_s);
+
+RFRS: refresco port map (
+          clk_12megas => clk_12megas_s,
+          reset => reset,
+          display_dec => dec_s,
+          display_un => un_s,
+          number => segments,
+          select_disp => an_sel);          
+             
+--CHNG: cambio_valor port map (
+--          clk => clk_12megas_s,
+--          rst => reset,
+--          d => address_s,
+--          sample_play_enable => sample_enable_s
+--        );
                                       
 FILTR: fir_filter port map (
          clk => clk_12megas_s,

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Sat Jan 19 17:20:29 2019
+| Date             : Sun Jan 20 21:01:46 2019
 | Host             : JMP-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file dsed_audio_power_routed.rpt -pb dsed_audio_power_summary_routed.pb -rpx dsed_audio_power_routed.rpx
 | Design           : dsed_audio
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.230 |
-| Dynamic (W)              | 0.126 |
+| Total On-Chip Power (W)  | 0.233 |
+| Dynamic (W)              | 0.129 |
 | Device Static (W)        | 0.103 |
 | Effective TJA (C/W)      | 4.6   |
-| Max Ambient (C)          | 84.0  |
-| Junction Temperature (C) | 26.0  |
+| Max Ambient (C)          | 83.9  |
+| Junction Temperature (C) | 26.1  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -50,18 +50,19 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |      928 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      443 |     63400 |            0.70 |
-|   CARRY4       |    <0.001 |       29 |     15850 |            0.18 |
-|   Register     |    <0.001 |      215 |    126800 |            0.17 |
+| Slice Logic    |    <0.001 |     1017 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      489 |     63400 |            0.77 |
+|   CARRY4       |    <0.001 |       39 |     15850 |            0.25 |
+|   Register     |    <0.001 |      234 |    126800 |            0.18 |
 |   F7/F8 Muxes  |    <0.001 |        8 |     63400 |            0.01 |
-|   Others       |     0.000 |      164 |       --- |             --- |
-| Signals        |    <0.001 |      772 |       --- |             --- |
+|   Others       |     0.000 |      170 |       --- |             --- |
+| Signals        |    <0.001 |      838 |       --- |             --- |
 | Block RAM      |     0.003 |      128 |       135 |           94.81 |
 | MMCM           |     0.121 |        1 |         6 |           16.67 |
-| I/O            |    <0.001 |       12 |       210 |            5.71 |
+| DSPs           |    <0.001 |        1 |       240 |            0.42 |
+| I/O            |     0.004 |       27 |       210 |           12.86 |
 | Static Power   |     0.103 |          |           |                 |
-| Total          |     0.230 |          |           |                 |
+| Total          |     0.233 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.023 |       0.005 |      0.018 |
 | Vccaux    |       1.800 |     0.085 |       0.067 |      0.018 |
-| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
+| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -145,7 +146,7 @@ Table of Contents
 +------------------------------------------------+-----------+
 | Name                                           | Power (W) |
 +------------------------------------------------+-----------+
-| dsed_audio                                     |     0.126 |
+| dsed_audio                                     |     0.129 |
 |   ADDR                                         |    <0.001 |
 |   FILTR                                        |    <0.001 |
 |     CTRL                                       |    <0.001 |
@@ -291,6 +292,8 @@ Table of Contents
 |                 prim_noinit.ram                |    <0.001 |
 |               ramloop[9].ram.r                 |    <0.001 |
 |                 prim_noinit.ram                |    <0.001 |
+|   RFRS                                         |    <0.001 |
+|   SCND                                         |    <0.001 |
 |   U_AI                                         |    <0.001 |
 |     U_EN                                       |    <0.001 |
 |     U_MICRO                                    |    <0.001 |

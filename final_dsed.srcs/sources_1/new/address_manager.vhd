@@ -40,6 +40,7 @@ entity address_manager is
            BTNR : in STD_LOGIC;
            up_dwn : in STD_LOGIC;
            playing : out STD_LOGIC;
+           last_recorded : out  std_logic_vector (18 downto 0);
            address : out STD_LOGIC_VECTOR (18 downto 0));
 end address_manager;
 
@@ -80,7 +81,7 @@ begin
              end if; 
     end process;
 --next-state logic
-last_address_next <= (others => '0') when (last_address_reg = std_logic_vector(to_unsigned(524287,19))) else
+last_address_next <= std_logic_vector(to_unsigned(524287,19)) when (last_address_reg >= std_logic_vector(to_unsigned(524287,19))) else
                       std_logic_vector(unsigned(last_address_reg) + 1);
                       
 selection <= last_address_reg when (up_dwn = '1') else
@@ -107,5 +108,6 @@ address_reg <= last_record_reg when (sample_request = '1' and sample_ready = '0'
 -- Output
 playing <= btnr_pressed_reg;
 address <= address_reg;
+last_recorded <= last_address_reg;
 
 end Behavioral;

@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="124652334000fs"></ZoomStartTime>
-      <ZoomEndTime time="126874334001fs"></ZoomEndTime>
-      <Cursor1Time time="125638333000fs"></Cursor1Time>
+      <ZoomStartTime time="344648605424fs"></ZoomStartTime>
+      <ZoomEndTime time="346708605425fs"></ZoomEndTime>
+      <Cursor1Time time="337518605000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="149"></NameColumnWidth>
+      <NameColumnWidth column_width="166"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="54" />
+   <WVObjectSize size="69" />
    <wvobject fp_name="/dsed_audio_tb/DUT/clk_12megas_s" type="logic">
       <obj_property name="ElementShortName">clk_12megas_s</obj_property>
       <obj_property name="ObjectShortName">clk_12megas_s</obj_property>
@@ -348,5 +348,69 @@
       <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
       <obj_property name="radix_fractionWidth">7</obj_property>
       <obj_property name="radix_otherWidth">0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/last_dir" type="array">
+      <obj_property name="ElementShortName">last_dir[18:0]</obj_property>
+      <obj_property name="ObjectShortName">last_dir[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/current_dir" type="array">
+      <obj_property name="ElementShortName">current_dir[18:0]</obj_property>
+      <obj_property name="ObjectShortName">current_dir[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/playing" type="logic">
+      <obj_property name="ElementShortName">playing</obj_property>
+      <obj_property name="ObjectShortName">playing</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/BTNL" type="logic">
+      <obj_property name="ElementShortName">BTNL</obj_property>
+      <obj_property name="ObjectShortName">BTNL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/up_dwn" type="logic">
+      <obj_property name="ElementShortName">up_dwn</obj_property>
+      <obj_property name="ObjectShortName">up_dwn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/seconds" type="array">
+      <obj_property name="ElementShortName">seconds[4:0]</obj_property>
+      <obj_property name="ObjectShortName">seconds[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/dir_up_dwn" type="array">
+      <obj_property name="ElementShortName">dir_up_dwn[18:0]</obj_property>
+      <obj_property name="ObjectShortName">dir_up_dwn[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/dirs_remaining" type="array">
+      <obj_property name="ElementShortName">dirs_remaining[18:0]</obj_property>
+      <obj_property name="ObjectShortName">dirs_remaining[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/dir_recording" type="array">
+      <obj_property name="ElementShortName">dir_recording[18:0]</obj_property>
+      <obj_property name="ObjectShortName">dir_recording[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/zero" type="array">
+      <obj_property name="ElementShortName">zero[18:0]</obj_property>
+      <obj_property name="ObjectShortName">zero[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/fixed_point" type="array">
+      <obj_property name="ElementShortName">fixed_point[25:0]</obj_property>
+      <obj_property name="ObjectShortName">fixed_point[25:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/SCND/factor" type="array">
+      <obj_property name="ElementShortName">factor[6:0]</obj_property>
+      <obj_property name="ObjectShortName">factor[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/segments" type="array">
+      <obj_property name="ElementShortName">segments[6:0]</obj_property>
+      <obj_property name="ObjectShortName">segments[6:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/an_sel" type="array">
+      <obj_property name="ElementShortName">an_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">an_sel[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/RFRS/contador" type="array">
+      <obj_property name="ElementShortName">contador[17:0]</obj_property>
+      <obj_property name="ObjectShortName">contador[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
