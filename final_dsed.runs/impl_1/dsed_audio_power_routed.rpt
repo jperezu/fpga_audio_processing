@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Thu Jan 10 17:24:10 2019
+| Date             : Sat Jan 19 17:20:29 2019
 | Host             : JMP-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file dsed_audio_power_routed.rpt -pb dsed_audio_power_summary_routed.pb -rpx dsed_audio_power_routed.rpx
 | Design           : dsed_audio
@@ -50,13 +50,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |      967 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      478 |     63400 |            0.75 |
+| Slice Logic    |    <0.001 |      928 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      443 |     63400 |            0.70 |
 |   CARRY4       |    <0.001 |       29 |     15850 |            0.18 |
-|   Register     |    <0.001 |      217 |    126800 |            0.17 |
-|   F7/F8 Muxes  |    <0.001 |       17 |     63400 |            0.03 |
+|   Register     |    <0.001 |      215 |    126800 |            0.17 |
+|   F7/F8 Muxes  |    <0.001 |        8 |     63400 |            0.01 |
 |   Others       |     0.000 |      164 |       --- |             --- |
-| Signals        |    <0.001 |      791 |       --- |             --- |
+| Signals        |    <0.001 |      772 |       --- |             --- |
 | Block RAM      |     0.003 |      128 |       135 |           94.81 |
 | MMCM           |     0.121 |        1 |         6 |           16.67 |
 | I/O            |    <0.001 |       12 |       210 |            5.71 |
@@ -150,7 +150,7 @@ Table of Contents
 |   FILTR                                        |    <0.001 |
 |     CTRL                                       |    <0.001 |
 |     FIR                                        |    <0.001 |
-|       H_M                                      |    <0.001 |
+|       H_M                                      |     0.000 |
 |       R1                                       |    <0.001 |
 |       R2                                       |    <0.001 |
 |       R3                                       |    <0.001 |

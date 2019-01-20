@@ -56,7 +56,7 @@ component en_4_cycles Port (
 end component;
 
 
-constant clk_period : time := 167 ns;
+constant clk_period : time :=  83.33 ns;
 signal clk_s, clk_3megas_s, reset_s, rst_cycles_s, micro_data_s : std_logic;
 signal en_2_cycles_s, enable_4_cycles_s, sample_out_ready_s: std_logic;
 signal sample_out_s : std_logic_vector(sample_size-1 downto 0);
@@ -87,7 +87,6 @@ DUT_EN: en_4_cycles port map(
         wait for clk_period/2;
     end process;
     
-
     stim_process : process
         begin
         micro_data_s <= '1';
@@ -97,12 +96,12 @@ DUT_EN: en_4_cycles port map(
         reset_s <= '1';
         rst_cycles_s <= '0'; 
         
---        a <= not a after 1300 ns;
---        b <= not b after 2100 ns;
+--        a <= not a after 2900 ns;
+--        b <= not b after 3000 ns;
 --        c <= not c after 3700 ns;
         
         
-        wait for 200 us;
+        wait for 1000 us;
         reset_s <= '0';
         rst_cycles_s <= '1';
         wait for 250 us;

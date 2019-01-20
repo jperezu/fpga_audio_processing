@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  "dsed_audio_tb_func_impl.vhd"
-vhdl xil_defaultlib  "../../../../final_dsed.srcs/sim_1/new/dsed_audio_tb.vhd"
-
-# Do not sort compile order
-nosort

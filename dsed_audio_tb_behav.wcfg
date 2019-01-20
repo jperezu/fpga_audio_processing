@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1440308083334fs"></ZoomStartTime>
-      <ZoomEndTime time="1440829583335fs"></ZoomEndTime>
-      <Cursor1Time time="1440395000000fs"></Cursor1Time>
+      <ZoomStartTime time="124652334000fs"></ZoomStartTime>
+      <ZoomEndTime time="126874334001fs"></ZoomEndTime>
+      <Cursor1Time time="125638333000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="153"></NameColumnWidth>
+      <NameColumnWidth column_width="149"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="52" />
+   <WVObjectSize size="54" />
    <wvobject fp_name="/dsed_audio_tb/DUT/clk_12megas_s" type="logic">
       <obj_property name="ElementShortName">clk_12megas_s</obj_property>
       <obj_property name="ObjectShortName">clk_12megas_s</obj_property>
@@ -53,6 +53,14 @@
    <wvobject fp_name="/dsed_audio_tb/DUT/MEM/ena" type="logic">
       <obj_property name="ElementShortName">ena</obj_property>
       <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/U_AI/U_MICRO/state_reg" type="other">
+      <obj_property name="ElementShortName">state_reg</obj_property>
+      <obj_property name="ObjectShortName">state_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/U_AI/U_MICRO/enable_4_cycles" type="logic">
+      <obj_property name="ElementShortName">enable_4_cycles</obj_property>
+      <obj_property name="ObjectShortName">enable_4_cycles</obj_property>
    </wvobject>
    <wvobject fp_name="/dsed_audio_tb/DUT/ADDR/sample_ready" type="logic">
       <obj_property name="ElementShortName">sample_ready</obj_property>
