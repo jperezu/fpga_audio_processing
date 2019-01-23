@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="344648605424fs"></ZoomStartTime>
-      <ZoomEndTime time="346708605425fs"></ZoomEndTime>
-      <Cursor1Time time="337518605000fs"></Cursor1Time>
+      <ZoomStartTime time="4225638333000fs"></ZoomStartTime>
+      <ZoomEndTime time="5569638333001fs"></ZoomEndTime>
+      <Cursor1Time time="5041638333000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="166"></NameColumnWidth>
+      <NameColumnWidth column_width="162"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="69" />
+   <WVObjectSize size="73" />
    <wvobject fp_name="/dsed_audio_tb/DUT/clk_12megas_s" type="logic">
       <obj_property name="ElementShortName">clk_12megas_s</obj_property>
       <obj_property name="ObjectShortName">clk_12megas_s</obj_property>
@@ -404,13 +404,33 @@
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/dsed_audio_tb/DUT/an_sel" type="array">
-      <obj_property name="ElementShortName">an_sel[1:0]</obj_property>
-      <obj_property name="ObjectShortName">an_sel[1:0]</obj_property>
+      <obj_property name="ElementShortName">an_sel[7:0]</obj_property>
+      <obj_property name="ObjectShortName">an_sel[7:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/dsed_audio_tb/DUT/RFRS/contador" type="array">
       <obj_property name="ElementShortName">contador[17:0]</obj_property>
       <obj_property name="ObjectShortName">contador[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/LVL/sample_in" type="array">
+      <obj_property name="ElementShortName">sample_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_in[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/LVL/leds" type="array">
+      <obj_property name="ElementShortName">leds[7:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/LVL/mult" type="array">
+      <obj_property name="ElementShortName">mult[12:0]</obj_property>
+      <obj_property name="ObjectShortName">mult[12:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsed_audio_tb/DUT/LVL/leds_number" type="array">
+      <obj_property name="ElementShortName">leds_number[3:0]</obj_property>
+      <obj_property name="ObjectShortName">leds_number[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
 </wave_config>

@@ -87,10 +87,6 @@ last_address_next <= std_logic_vector(to_unsigned(524287,19)) when (last_address
 selection <= last_address_reg when (up_dwn = '1') else
              (others => '0');
              
---last_record_next <= selection when ((last_record_reg >= last_address_reg and up_dwn = '0') or
---                     (last_record_reg = std_logic_vector(to_unsigned(0,19))  and up_dwn = '1')) else
---                     std_logic_vector(unsigned(last_record_reg) - 1) when (up_dwn = '1') else
---                     std_logic_vector(unsigned(last_record_reg) + 1);
 
 btnr_pressed_next <= '0' when ((last_record_reg >= last_address_reg and up_dwn = '0') or
                                  (last_record_reg = std_logic_vector(to_unsigned(0,19))  and up_dwn = '1')) else

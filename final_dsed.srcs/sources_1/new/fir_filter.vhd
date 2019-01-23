@@ -48,9 +48,7 @@ architecture Behavioral of fir_filter is
 component fir_data_flow
   Port (clk_12megas : in STD_LOGIC;
         reset : in STD_LOGIC;
-        control_in: in STD_LOGIC_VECTOR (2 DOWNTO 0);
-        control_flow: in STD_LOGIC_VECTOR (1 downto 0);
-        control_add: in STD_LOGIC;
+        control: in STD_LOGIC_VECTOR (2 DOWNTO 0);
         c0 : in signed (sample_size-1 downto 0);
         c1 : in signed (sample_size-1 downto 0);
         c2 : in signed (sample_size-1 downto 0);
@@ -71,9 +69,7 @@ component controlador_filtro
           filter_select : in STD_LOGIC;
           sample_in :  in signed(sample_size-1 downto 0);
           sample_in_ready : in  STD_LOGIC;
-          control_in: out STD_LOGIC_VECTOR (2 DOWNTO 0);
-          control_flow: out STD_LOGIC_VECTOR (1 downto 0);
-          control_add: out STD_LOGIC;
+          control: out STD_LOGIC_VECTOR (2 DOWNTO 0);
           c0 : out signed (sample_size-1 downto 0);
           c1 : out signed (sample_size-1 downto 0);
           c2 : out signed (sample_size-1 downto 0);
@@ -88,17 +84,13 @@ component controlador_filtro
 end component;
 
 signal c_0, c_1, c_2, c_3, c_4, x_0, x_1, x_2, x_3, x_4 : signed (sample_size-1 downto 0);
-signal control_in_s : std_logic_vector (2 downto 0);
-signal control_flow_s : STD_LOGIC_VECTOR (1 downto 0);
-signal control_add_s : std_logic;
+signal control_s : std_logic_vector (2 downto 0);
 begin
 
 FIR: fir_data_flow port map (
         clk_12megas => clk,
         reset => reset,
-        control_in => control_in_s,
-        control_flow => control_flow_s,
-        control_add => control_add_s,
+        control => control_s,
         c0 => c_0,
         c1 => c_1,
         c2 => c_2,
@@ -118,9 +110,7 @@ CTRL: controlador_filtro port map (
           filter_select => filter_select,
           sample_in => Sample_In,
           sample_in_ready => Sample_In_enable,
-          control_in => control_in_s,
-          control_flow => control_flow_s,
-          control_add => control_add_s,
+          control => control_s,
           c0 => c_0,
           c1 => c_1,
           c2 => c_2,

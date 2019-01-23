@@ -1,6 +1,6 @@
 Vivado Simulator 2017.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 6fe248a97fef4921ac7e6026104f67fa --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSMD_tb_func_impl xil_defaultlib.FSMD_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 6fe248a97fef4921ac7e6026104f67fa --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot filtered_to_matlab_func_impl xil_defaultlib.filtered_to_matlab -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -12,7 +12,13 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package xil_defaultlib.package_dsed
 Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.en_4_cycles [en_4_cycles_default]
-Compiling architecture behavioral of entity xil_defaultlib.FSMD_microphone [fsmd_microphone_default]
-Compiling architecture behavioral of entity xil_defaultlib.fsmd_tb
-Built simulation snapshot FSMD_tb_func_impl
+Compiling architecture behavioral of entity xil_defaultlib.multiplexor [multiplexor_default]
+Compiling architecture behavioral of entity xil_defaultlib.multiplicador [multiplicador_default]
+Compiling architecture behavioral of entity xil_defaultlib.registro [registro_default]
+Compiling architecture behavioral of entity xil_defaultlib.sumador [sumador_default]
+Compiling architecture behavioral of entity xil_defaultlib.fir_data_flow [fir_data_flow_default]
+Compiling architecture behavioral of entity xil_defaultlib.controlador_filtro [controlador_filtro_default]
+Compiling architecture behavioral of entity xil_defaultlib.fir_filter [fir_filter_default]
+Compiling architecture behavioral of entity xil_defaultlib.hold [hold_default]
+Compiling architecture behavioral of entity xil_defaultlib.filtered_to_matlab
+Built simulation snapshot filtered_to_matlab_func_impl

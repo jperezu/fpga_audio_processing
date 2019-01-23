@@ -35,9 +35,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity fir_data_flow is
   Port (clk_12megas : in STD_LOGIC;
         reset : in STD_LOGIC;
-        control_in: in STD_LOGIC_VECTOR (2 DOWNTO 0);
-        control_flow: in STD_LOGIC_VECTOR (1 downto 0);
-        control_add: in STD_LOGIC;
+        control: in STD_LOGIC_VECTOR (2 DOWNTO 0);
         c0 : in signed (sample_size-1 downto 0);
         c1 : in signed (sample_size-1 downto 0);
         c2 : in signed (sample_size-1 downto 0);
@@ -60,22 +58,13 @@ component multiplexor
            a2 : in signed (sample_size-1 downto 0);
            a3 : in signed (sample_size-1 downto 0);
            a4 : in signed (sample_size-1 downto 0);
+           a5 : in signed (sample_size-1 downto 0);
+           a6 : in signed (sample_size-1 downto 0);
            ctrl : in STD_LOGIC_VECTOR (2 downto 0);
            b : out signed (sample_size-1 downto 0));
 end component;
 
-component multiplexor_2 
-    Port ( a0 : in signed (sample_size-1 downto 0);
-           a1 : in signed (sample_size-1 downto 0);
-           ctrl : in STD_LOGIC_VECTOR (1 downto 0);
-           b : out signed (sample_size-1 downto 0));
-end component;
 
-component multiplexor_1
-    Port ( a0 : in signed (sample_size-1 downto 0);
-           ctrl : in STD_LOGIC;
-           b : out signed (sample_size-1 downto 0));
-end component;
 
 component registro
     Port ( clk : in STD_LOGIC;
@@ -96,81 +85,78 @@ component multiplicador
            c : out signed (sample_size-1 downto 0));
 end component;
 
-signal s_0, s_1, s_2, s_3, s_4, s_5, s_6, s_7, s_8, s_sum : signed (sample_size-1 downto 0);
+signal s_0, s_1, s_2, s_3, s_4, s_5, s_6, s_7, s_8, s_9, s_sum, s_mult: signed (sample_size-1 downto 0);
 
 begin
 
-MUX1: multiplexor port map (  
-         a0 => c0,
-         a1 => c1,
-         a2 => c2,
-         a3 => c3,
-         a4 => c4,
-         ctrl => control_in,
-         b  => s_0
-         );
-         
+MUX1: multiplexor port map (
+          a0 => c0,
+          a1 => c1,
+          a2 => c2,
+          a3 => c3,
+          a4 => c4,
+          a5 => to_signed(0, sample_size),
+          a6 => to_signed(0, sample_size),
+          ctrl => control,
+          b => s_0
+);
+
 MUX2: multiplexor port map (
-        a0 => x0,
-        a1 => x1,
-        a2 => x2,
-        a3 => x3,
-        a4 => x4,
-        ctrl => control_in,
-        b  => s_1
-        );
-        
+          a0 => x0,
+          a1 => x1,
+          a2 => x2,
+          a3 => x3,
+          a4 => x4,
+          a5 => to_signed(0, sample_size),
+          a6 => to_signed(0, sample_size),
+          ctrl => control,
+          b => s_1
+);
+
+MUX3: multiplexor port map (
+          a0 => to_signed(0, sample_size),
+          a1 => s_2,
+          a2 => s_4,
+          a3 => s_sum,
+          a4 => s_sum,
+          a5 => s_sum,
+          a6 => s_sum,
+          ctrl => control,
+          b => s_3
+);
+
+
 H_M: multiplicador port map(
         a => s_0,
         b => s_1,
-        c => s_2
+        c => s_mult
         );
-        
-R1: registro port map (
+R_MULT: registro port map (
         clk  => clk_12megas,
         rst  => reset,
-        d    => s_2,
-        q    => s_3
-        );
-
-R2: registro port map (
+        d    => s_mult,
+        q    => s_2
+        );  
+R1: registro port map (
         clk  => clk_12megas,
         rst  => reset,
         d    => s_3,
         q    => s_4
         );
-        
-R3: registro port map (
+
+R2: registro port map (
         clk  => clk_12megas,
         rst  => reset,
-        d    => s_4,
+        d    => s_2,
         q    => s_5
         );
         
-MUX3: multiplexor_2 port map (
-       a0 => s_5,
-       a1 => s_8, 
-       ctrl => control_flow,
-       b  => s_6
-       );
-       
 ADD: sumador port map(
         a => s_4,
-        b => s_6,
+        b => s_5,
         c => s_sum
         );
         
-MUX4: multiplexor_1 port map (
-       a0 => s_sum, 
-       ctrl => control_add,
-       b  => s_7
-       );
-                       
-R4: registro port map (
-        clk  => clk_12megas,
-        rst  => reset,
-        d    => s_7,
-        q    => s_8
-        );
- y <= s_8;       
+
+ y <= s_sum;       
 end Behavioral;

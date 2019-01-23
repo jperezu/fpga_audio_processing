@@ -40,10 +40,10 @@ end ca2;
 
 architecture Behavioral of ca2 is
 
-signal mask : std_logic_vector(sample_size-1 downto 0);
+signal mask : std_logic;
 
 begin
-    mask <= (sample_size-1 => '1', others => '0');
-    comp <= bin xor mask;
+    mask <= bin(7) xor '1';
+    comp <= mask & bin(6 downto 0);
 
 end Behavioral;

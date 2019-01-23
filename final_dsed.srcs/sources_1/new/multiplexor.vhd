@@ -37,6 +37,8 @@ entity multiplexor is
            a2 : in signed (sample_size-1 downto 0);
            a3 : in signed (sample_size-1 downto 0);
            a4 : in signed (sample_size-1 downto 0);
+           a5 : in signed (sample_size-1 downto 0);
+           a6 : in signed (sample_size-1 downto 0);
            ctrl : in STD_LOGIC_VECTOR (2 downto 0);
            b : out signed (sample_size-1 downto 0));
 end multiplexor;
@@ -51,6 +53,8 @@ with ctrl select
          a2 when "010",
          a3 when "011",
          a4 when "100",
+         a5 when "101",
+         a6 when "110",
          to_signed(0, sample_size) when others;
 
 end Behavioral;

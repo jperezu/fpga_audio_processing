@@ -51,7 +51,9 @@ entity dsed_audio is
         jack_pwm : out STD_LOGIC;
         --7-segments display
         segments : out std_logic_vector (6 downto 0);
-        an_sel : out std_logic_vector (7 downto 0)
+        an_sel : out std_logic_vector (7 downto 0);
+        --leds
+        led_level : out std_logic_vector (7 downto 0)
     );
 end dsed_audio;
 
@@ -200,6 +202,15 @@ component hold
            q : out signed (sample_size-1 downto 0));
 end component;
 
+component level
+  Port (clk_12megas : in STD_LOGIC; 
+        reset : in STD_LOGIC;
+        sample_in : in std_logic_vector (sample_size-1 downto 0);
+        enable : in std_logic;
+        leds : out std_logic_vector (7 downto 0));
+end component;
+
+
 signal clk_12megas_s : std_logic;
 signal last_recorded_s :  std_logic_vector (18 downto 0);
 signal seconds_s : std_logic_vector (4 downto 0);
@@ -285,12 +296,6 @@ RFRS: refresco port map (
           number => segments,
           select_disp => an_sel);          
              
---CHNG: cambio_valor port map (
---          clk => clk_12megas_s,
---          rst => reset,
---          d => address_s,
---          sample_play_enable => sample_enable_s
---        );
                                       
 FILTR: fir_filter port map (
          clk => clk_12megas_s,
@@ -326,4 +331,12 @@ HLD: hold port map (
         d  => data_filtered,
         q  => data_ca2_inv
         );
+        
+LVL: level port map(
+        clk_12megas => clk_12megas_s,
+        reset => reset,
+        sample_in => data_to_filter,
+        enable => playing_s,
+        leds => led_level        
+        );      
 end Behavioral;

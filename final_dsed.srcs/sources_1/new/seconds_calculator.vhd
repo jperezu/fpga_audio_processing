@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use work.package_dsed.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -47,7 +48,7 @@ signal dirs_remaining : unsigned (18 downto 0);
 signal dir_recording: unsigned (18 downto 0);
 signal zero : std_logic_vector (18 downto 0) := (others => '0');
 signal fixed_point : std_logic_vector (25 downto 0);
-signal factor : std_logic_vector (6 downto 0) := "1101000";
+signal seconds_value : std_logic_vector (4 downto 0);
 
 begin
 
@@ -60,7 +61,10 @@ dir_recording <= unsigned(current_dir) when (BTNL = '1') else
 dirs_remaining <= dir_up_dwn when (playing = '1') else
                   dir_recording;
 
-fixed_point <= std_logic_vector(dirs_remaining * unsigned(factor));
-seconds <= fixed_point (25 downto 21);
+fixed_point <= std_logic_vector(dirs_remaining * unsigned(factor_muestreo));
+seconds_value <= fixed_point (25 downto 21);
+seconds <= std_logic_vector(unsigned(seconds_value) + to_unsigned(1,4)) when (playing = '1') else
+           std_logic_vector(unsigned(seconds_value) + to_unsigned(1,4)) when (BTNL = '1') else
+           std_logic_vector(unsigned(seconds_value));
 
 end Behavioral;

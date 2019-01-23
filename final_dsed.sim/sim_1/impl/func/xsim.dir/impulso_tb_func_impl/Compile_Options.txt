@@ -1,0 +1,1 @@
+-wto "6fe248a97fef4921ac7e6026104f67fa" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "impulso_tb_func_impl" "xil_defaultlib.impulso_tb" -log "elaborate.log" 
